@@ -1,0 +1,102 @@
+html, body {
+  height: 100%;
+  background-color: #FAFAFA;
+  font-family: 'Roboto', sans-serif; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box; }
+
+#overlay {
+  display: none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #7f8c8d;
+  opacity: 0.6;
+  z-index: 199; }
+
+#popup {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #ffffff;
+  width: 500px;
+  height: 500px;
+  margin-left: -250px;
+  /*Half the value of width to center div*/
+  margin-top: -250px;
+  /*Half the value of width to center div*/
+  z-index: 200; }
+
+#popup-close {
+  float: right;
+  padding: 10px;
+  cursor: pointer; }
+
+.navigation {
+  background-color: #e74c3c;
+  padding: 12px 30px; }
+  .navigation a {
+    color: #ffffff; }
+  .navigation .nav-left {
+    display: inline-block; }
+  .navigation .nav-right {
+    display: inline-block;
+    float: right; }
+    .navigation .nav-right a {
+      margin-right: 20px; }
+    .navigation .nav-right a:last-of-type {
+      margin-right: 0px; }
+
+.list-header {
+  padding: 15px 30px; }
+  .list-header a {
+    display: inline-block;
+    color: #e74c3c;
+    text-decoration: none; }
+    .list-header a i {
+      padding-left: 10px; }
+  .list-header .button-change-date {
+    float: right; }
+
+.list .list-element a {
+  display: block;
+  text-decoration: none;
+  padding: 15px 30px;
+  color: #212121;
+  border-bottom: 1px solid #E0E0E0; }
+  .list .list-element a .name-and-date {
+    padding-bottom: 5px; }
+    .list .list-element a .name-and-date .due-date {
+      color: #9E9E9E;
+      display: inline-block;
+      float: right; }
+  .list .list-element a .additional-info {
+    color: #9E9E9E;
+    font-size: 14px;
+    font-weight: 500; }
+  .list .list-element a:hover {
+    background-color: #EEEEEE; }
+
+.no-tasks {
+  padding: 0px 30px;
+  text-align: center; }
+
+.new-task-panel .button-new-task {
+  display: block;
+  margin: 15px auto;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: #ffffff;
+  text-align: center;
+  line-height: 60px;
+  font-size: 32px;
+  background-color: #f39c12;
+  box-shadow: 0 0 32px rgba(127, 0, 0, 0.25); }

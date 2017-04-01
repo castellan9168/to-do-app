@@ -1,0 +1,52 @@
+.list-header {
+	padding: 15px $outer-padding;
+	a {	
+		display: inline-block;
+		color: #e74c3c;
+		text-decoration: none;
+
+		i {
+			padding-left: 10px;
+		}
+	}
+
+	.button-change-date {
+		float: right;
+	}
+}
+
+.list {
+	.list-element {
+		a {
+			display: block;
+			text-decoration: none;
+			padding: 15px $outer-padding;
+			color: #212121;
+			border-bottom: 1px solid #E0E0E0;
+
+			.name-and-date {
+				padding-bottom: 5px;
+				.due-date {
+					color: #9E9E9E;
+					display: inline-block;
+					float: right;
+				}
+			}
+
+			.additional-info {
+				color: #9E9E9E;
+				font-size: 14px;
+				font-weight: 500;
+			}
+
+			&:hover {
+				background-color: #EEEEEE;
+			}
+		}
+	}
+}
+
+.no-tasks {
+	padding: 0px $outer-padding;
+	text-align: center;
+}

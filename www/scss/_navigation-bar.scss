@@ -1,0 +1,25 @@
+.navigation {
+	
+	background-color: #e74c3c;
+	padding: 12px $outer-padding;
+
+	& a {
+		color: #ffffff;
+	}
+
+	.nav-left {
+		display: inline-block;
+		
+	}
+
+	.nav-right {
+		display: inline-block;
+		float: right;
+		& a {
+			margin-right: 20px;
+		}
+		a:last-of-type {
+			margin-right: 0px;
+		}
+	}
+}
