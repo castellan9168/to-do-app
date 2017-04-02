@@ -21,62 +21,7 @@
 
 <!-- define angular controller -->
 <body ng-controller="mainController">
-  <div id="overlay"></div>
-  <div id="popup">
-      <div class="popup-controls">
-        <span id="popup-close" ng-click="closePopup()">X</span>
-      </div>
-      <div class="popup-content">
-        <h4>New task</h4>
-        <form>
-          <div>
-            <label for="task-name">Name your task</label>
-            <input type="text" class="" id="task-name" placeholer="e.g. meeting wednesday, 15" ng-model="task.name">
-          </div>
-          <div>
-            <label for="due-date">Date</label>
-            <input type="date" class="" id="due-date" ng-model="task.dueDate">
-          </div>
-          <div>
-            <label for="project">Project</label>
-            <input type="text" class="" id="project" ng-model="task.project">
-          </div>
-          <div>
-            <label for="priority">Priority</label>
-            <select name="Priority" id="priority" ng-model="task.priority">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-            </select>
-          </div>
-          <div>
-            <label for="tags">Tags</label>
-            <input type="text" class="" id="tags" ng-model="task.tags">
-          </div>
-          <div>
-            <label for="parent">Parent</label>
-            <input type="text" class="" id="parent" ng-model="task.parent">
-          </div>
-          <div>
-            <label for="comments">Comments</label>
-            <input type="text" class="" id="comments" ng-model="task.comments">
-          </div>
-          <div>
-            <label for="reminders">Remind me</label>
-            <select name="Remind me" id="reminders" ng-model="task.reminders">
-              <option value="1">10 minutes before</option>
-              <option value="2">30 minutes before</option>
-              <option value="3">1 hour before</option>
-              <option value="4">2 hours before</option>
-            </select>
-          </div>
-          <div>
-            <button type="submit" ng-click="addNewTask()">Confirm</button>
-          </div>
-        </form>
-      </div>
-  </div>
+  <new-task-modal id="new-task-pop-up"></new-task-modal>
   <nav class="navigation">
       <div class="nav-left">
         <a href=""><i class="fa fa-bars" aria-hidden="true"></i></a>
@@ -87,8 +32,17 @@
       </div>
   </nav>
   <div class="list-header">
-    <a href="" class="filter-task-status" ng-click="">Unaccomplished<i class="fa fa-caret-down" aria-hidden="true"></i></a>
-    <a href="" class="button-change-date" ng-click="">Change date<i class="fa fa-calendar-o" aria-hidden="true"></i></a>
+    <div href="" class="filter-project-type" ng-click="">
+      All<i class="fa fa-caret-down" aria-hidden="true"></i>
+      <div class="dropdown-content">
+        <a href=""><i class="fa fa-circle" aria-hidden="true"></i>Personal</a>
+        <a href=""><i class="fa fa-circle" aria-hidden="true"></i>Shopping</a>
+        <a href=""><i class="fa fa-circle" aria-hidden="true"></i>Work</a>
+        <a href=""><i class="fa fa-circle" aria-hidden="true"></i>Errands</a>
+        <a href=""><i class="fa fa-circle" aria-hidden="true"></i>Movies to watch</a>
+      </div>
+    </div>
+    <div href="" class="button-change-date" ng-click="">Change date<i class="fa fa-calendar-o" aria-hidden="true"></i></div>
   </div>
   <div>
     <ul class="list" ng-show="showList">
