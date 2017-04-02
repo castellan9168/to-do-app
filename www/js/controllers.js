@@ -1,8 +1,7 @@
 angular.module('toDoApp')
 
-.controller('mainController', function($scope, saveTaskService, retrieveTasksFactory) {
-	var overlay = document.getElementById('overlay');
-	var popup = document.getElementById('popup');
+.controller('mainController', function($scope, $rootScope, saveTaskService, retrieveTasksFactory) {
+	var newTaskPopUp = document.getElementById('new-task-pop-up');
 	$scope.task = {
 		name: '',
 		project: '',
@@ -16,32 +15,17 @@ angular.module('toDoApp')
 
 	$scope.showList = false;
 
-	$scope.tasksList = {};
+	$rootScope.tasksList = {};
 	retrieveTasksFactory.getTasksList()
-		.then(function (tasks) {
-			$scope.tasksList = tasks;
-			if (tasks.length > 0) $scope.showList = true;
-		}, function (error) {
-			console.error(error);
-		});
-
-	$scope.addNewTask = function() {
-		saveTaskService.addTask($scope.task).then(function(msg) {
-			alert('New task added!');
-			//closePopup();
-		}, function(errMsg) {
-			alert('Unable to add new task');
-		});
-	};
+	.then(function (tasks) {
+		$rootScope.tasksList = tasks;
+		if (tasks.length > 0) $scope.showList = true;
+	}, function (error) {
+		console.error(error);
+	});
 
 	$scope.newTask = function() {
-		overlay.style.display = 'block';
-		popup.style.display = 'block';
-	};
-
-	$scope.closePopup = function() {
-		overlay.style.display = 'none';
-		popup.style.display = 'none';
+		newTaskPopUp.style.display = 'block';
 	};
 
 	$scope.taskDetails = function() {

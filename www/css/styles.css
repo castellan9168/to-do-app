@@ -10,33 +10,31 @@ html, body {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box; }
 
-#overlay {
-  display: none;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background: #7f8c8d;
-  opacity: 0.6;
-  z-index: 199; }
-
-#popup {
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  background: #ffffff;
-  width: 500px;
-  height: 500px;
-  margin-left: -250px;
-  /*Half the value of width to center div*/
-  margin-top: -250px;
-  /*Half the value of width to center div*/
-  z-index: 200; }
-
-#popup-close {
-  float: right;
-  padding: 10px;
-  cursor: pointer; }
+#new-task-pop-up {
+  display: none; }
+  #new-task-pop-up #overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #7f8c8d;
+    opacity: 0.6;
+    z-index: 199; }
+  #new-task-pop-up #popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #ffffff;
+    width: 500px;
+    height: 500px;
+    margin-left: -250px;
+    /*Half the value of width to center div*/
+    margin-top: -250px;
+    /*Half the value of width to center div*/
+    z-index: 200; }
+  #new-task-pop-up #popup-close {
+    float: right;
+    padding: 10px;
+    cursor: pointer; }
 
 .navigation {
   background-color: #e74c3c;
@@ -55,12 +53,28 @@ html, body {
 
 .list-header {
   padding: 15px 30px; }
-  .list-header a {
+  .list-header div {
     display: inline-block;
     color: #e74c3c;
-    text-decoration: none; }
-    .list-header a i {
+    text-decoration: none;
+    cursor: pointer; }
+    .list-header div i {
       padding-left: 10px; }
+  .list-header .filter-project-type {
+    position: relative; }
+    .list-header .filter-project-type .dropdown-content {
+      position: absolute;
+      border-radius: 3px;
+      width: 200px;
+      background-color: #FAFAFA;
+      box-shadow: 0 0 32px rgba(127, 0, 0, 0.25); }
+      .list-header .filter-project-type .dropdown-content a {
+        display: block;
+        text-decoration: none;
+        color: #212121; }
+        .list-header .filter-project-type .dropdown-content a i {
+          margin-right: 10px;
+          font-size: 11px; }
   .list-header .button-change-date {
     float: right; }
 
@@ -99,4 +113,4 @@ html, body {
   line-height: 60px;
   font-size: 32px;
   background-color: #f39c12;
-  box-shadow: 0 0 32px rgba(127, 0, 0, 0.25); }
+  box-shadow: 0 6px 12px rgba(127, 0, 0, 0.2); }
