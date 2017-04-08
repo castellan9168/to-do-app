@@ -17,10 +17,20 @@ router.post('/newTask', function(req, res) {
 	if(!req.body.name) {
 		res.json({success: false, msg: 'Please add name to the task'});
 	} else {
+		var date = new Date(req.body.date); // new line
+		var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October','November', 'December'];
+		var weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+		var weekDay = weekDays[date.getDay()];
+		var month = months[date.getMonth()];
+
+		console.log(date, month); // new line
+
 		var newTask = new Task({
 			name: req.body.name,
 			project: req.body.project,
-			dueDate: req.body.dueDate,
+			date: req.body.date,
+			displayDate: weekDay + ' ' + date.getDate() + ' ' + month + ' ' + date.getFullYear(),
 			priority: req.body.priority,
 			tags: req.body.tags,
 			parent: req.body.parent,

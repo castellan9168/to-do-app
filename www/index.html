@@ -32,25 +32,20 @@
       </div>
   </nav>
   <div class="list-header">
-    <div href="" class="filter-project-type" ng-click="">
-      All<i class="fa fa-caret-down" aria-hidden="true"></i>
-      <div class="dropdown-content">
-        <a href=""><i class="fa fa-circle" aria-hidden="true"></i>Personal</a>
-        <a href=""><i class="fa fa-circle" aria-hidden="true"></i>Shopping</a>
-        <a href=""><i class="fa fa-circle" aria-hidden="true"></i>Work</a>
-        <a href=""><i class="fa fa-circle" aria-hidden="true"></i>Errands</a>
-        <a href=""><i class="fa fa-circle" aria-hidden="true"></i>Movies to watch</a>
-      </div>
+    <div class="filter-project-type">
+      <select name="project-filter" id="" ng-model="projectFilter" ng-options="task.project for task in tasksList">
+        <option value="">All</option>
+      </select>
     </div>
-    <div href="" class="button-change-date" ng-click="">Change date<i class="fa fa-calendar-o" aria-hidden="true"></i></div>
+    <div class="button-change-date" ng-click="">Change date<i class="fa fa-calendar-o" aria-hidden="true"></i></div>
   </div>
   <div>
     <ul class="list" ng-show="showList">
-      <li ng-repeat='task in tasksList' class="list-element">
+      <li ng-repeat='task in tasksList | filter: projectFilter' class="list-element">
         <a href="" ng-click="taskDetails()">
           <div class="content">
             <div class="name-and-date">
-              <span class="task-name">{{task.name}}</span> <span class="due-date">{{task.dueDate}}</span> 
+              <span class="task-name">{{task.name}}</span> <span class="due-date">{{task.displayDate}}</span> 
             </div>
             <div class="additional-info">
               <span>{{task.project}}</span>

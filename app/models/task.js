@@ -8,7 +8,10 @@ var taskSchema = new mongoose.Schema({
 	project: {
 		type: String
 	},
-	dueDate: {
+	date: {
+		type: Date
+	},
+	displayDate: {
 		type: String
 	},
 	priority: {
@@ -27,5 +30,19 @@ var taskSchema = new mongoose.Schema({
 		type: Array
 	}
 });
+
+
+// new method
+taskSchema.methods.convertDate = function(date) {
+	var temp = new  Date(date);
+	var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+	var weekDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+	var year = temp.getFullYear();
+	var month = months[temp.getMonth()];
+	var day = temp.getDate();
+	var weekDay = weekDay[temp.getDay()];
+
+	return weekDay + ' ' + day + ' ' + month + ' ' + year;
+};
 
 module.exports = mongoose.model('Task', taskSchema);

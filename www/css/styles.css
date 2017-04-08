@@ -62,19 +62,29 @@ html, body {
       padding-left: 10px; }
   .list-header .filter-project-type {
     position: relative; }
+    .list-header .filter-project-type #filter-project-type-dropdown {
+      display: none; }
     .list-header .filter-project-type .dropdown-content {
       position: absolute;
       border-radius: 3px;
+      margin-top: 4px;
       width: 200px;
       background-color: #FAFAFA;
-      box-shadow: 0 0 32px rgba(127, 0, 0, 0.25); }
+      box-shadow: 0 4px 12px rgba(127, 0, 0, 0.2); }
+      .list-header .filter-project-type .dropdown-content:hover {
+        display: block; }
       .list-header .filter-project-type .dropdown-content a {
         display: block;
+        height: 35px;
         text-decoration: none;
-        color: #212121; }
+        color: #212121;
+        line-height: 35px; }
         .list-header .filter-project-type .dropdown-content a i {
           margin-right: 10px;
-          font-size: 11px; }
+          font-size: 11px;
+          line-height: 35px; }
+        .list-header .filter-project-type .dropdown-content a:hover {
+          background-color: #EEEEEE; }
   .list-header .button-change-date {
     float: right; }
 
@@ -113,4 +123,4 @@ html, body {
   line-height: 60px;
   font-size: 32px;
   background-color: #f39c12;
-  box-shadow: 0 6px 12px rgba(127, 0, 0, 0.2); }
+  box-shadow: 0 4px 12px rgba(127, 0, 0, 0.2); }
