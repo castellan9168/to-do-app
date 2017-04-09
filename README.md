@@ -10,4 +10,6 @@ A simple to-do-app with MEAN stack
 - [x] display date in format weekday dd-mm-yyy
 - [ ] for some reason list does not auto-refresh after adding first task to an empty list
 - [ ] add edit functionality for the task
-- [ ] taskDetails($event) does not work every time
+- [x] taskDetails($event) does not work every time
+- [ ] implement jeet-grid so that app is not full width, id doesn't look well 
+- [ ] finish configuring gulp-remove-code

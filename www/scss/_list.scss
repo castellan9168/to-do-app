@@ -1,5 +1,5 @@
 .list-header {
-	padding: 15px $outer-padding;
+	padding: 18px $outer-padding;
 	div {	
 		display: inline-block;
 		color: #e74c3c;
@@ -50,11 +50,16 @@
 }
 
 .list {
+	@include column(1);
+	list-style-type: none;
+	
 	.list-element {
 		a {
+			@include column(1);
 			display: block;
 			cursor: pointer;
 			text-decoration: none;
+			font-size: 22px;
 			padding: 15px $outer-padding;
 			color: #212121;
 			border-bottom: 1px solid #E0E0E0;
@@ -73,16 +78,42 @@
 				font-size: 14px;
 				font-weight: 500;
 			}
+			
+			.details {
+				padding-top: 11px;
+				.details-other {
+					@include column(9/12);
+					.detail-other-inline{
+						@include column(3/12);
+					}
+					.detail-other-note {
+						@include column(1);
+					}
+				}
+
+				.details-reminders {
+					@include column(3/12);
+				}
+
+				.label {
+					color: #757575;
+					font-size: 16px;
+					i {
+						font-size: 22px;
+						margin-right: 10px;
+					}
+				}
+			}
 
 			&:hover {
 				background-color: $background-on-hover;
 			}
-
-			& .details {
-				//display: none;
-			}
 		}
 	}
+}
+
+.new-task-panel {
+	@include column(1);
 }
 
 .no-tasks {

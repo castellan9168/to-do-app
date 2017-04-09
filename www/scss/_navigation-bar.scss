@@ -1,7 +1,9 @@
 .navigation {
 	
 	background-color: #e74c3c;
-	padding: 12px $outer-padding;
+	padding: 13px $outer-padding;
+	margin-bottom: 30px;
+	box-shadow: $drop-shadow;
 
 	& a {
 		color: #ffffff;

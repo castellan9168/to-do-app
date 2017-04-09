@@ -1,7 +1,21 @@
 html, body {
   height: 100%;
-  background-color: #FAFAFA;
+  background-color: #EEEEEE;
   font-family: 'Roboto', sans-serif; }
+
+.container {
+  width: auto;
+  max-width: 940px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 10px;
+  padding-right: 10px; }
+  .container::after {
+    content: '';
+    display: table;
+    clear: both; }
 
 * {
   margin: 0;
@@ -9,6 +23,12 @@ html, body {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box; }
+
+.box {
+  border: 1px solid #E0E0E0;
+  border-radius: 3px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(127, 0, 0, 0.1); }
 
 #new-task-pop-up {
   display: none; }
@@ -38,7 +58,9 @@ html, body {
 
 .navigation {
   background-color: #e74c3c;
-  padding: 12px 30px; }
+  padding: 13px 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(127, 0, 0, 0.1); }
   .navigation a {
     color: #ffffff; }
   .navigation .nav-left {
@@ -52,7 +74,7 @@ html, body {
       margin-right: 0px; }
 
 .list-header {
-  padding: 15px 30px; }
+  padding: 18px 30px; }
   .list-header div {
     display: inline-block;
     color: #e74c3c;
@@ -70,7 +92,7 @@ html, body {
       margin-top: 4px;
       width: 200px;
       background-color: #FAFAFA;
-      box-shadow: 0 4px 12px rgba(127, 0, 0, 0.2); }
+      box-shadow: 0 4px 12px rgba(127, 0, 0, 0.1); }
       .list-header .filter-project-type .dropdown-content:hover {
         display: block; }
       .list-header .filter-project-type .dropdown-content a {
@@ -88,25 +110,126 @@ html, body {
   .list-header .button-change-date {
     float: right; }
 
-.list .list-element a {
-  display: block;
-  cursor: pointer;
-  text-decoration: none;
-  padding: 15px 30px;
-  color: #212121;
-  border-bottom: 1px solid #E0E0E0; }
-  .list .list-element a .name-and-date {
-    padding-bottom: 5px; }
-    .list .list-element a .name-and-date .due-date {
+.list {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 3%;
+  list-style-type: none; }
+  .list::after {
+    content: '';
+    display: table;
+    clear: both; }
+  .list:last-child {
+    margin-right: 0%; }
+  .list .list-element a {
+    float: left;
+    clear: none;
+    text-align: inherit;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 3%;
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 22px;
+    padding: 15px 30px;
+    color: #212121;
+    border-bottom: 1px solid #E0E0E0; }
+    .list .list-element a::after {
+      content: '';
+      display: table;
+      clear: both; }
+    .list .list-element a:last-child {
+      margin-right: 0%; }
+    .list .list-element a .name-and-date {
+      padding-bottom: 5px; }
+      .list .list-element a .name-and-date .due-date {
+        color: #9E9E9E;
+        display: inline-block;
+        float: right; }
+    .list .list-element a .additional-info {
       color: #9E9E9E;
-      display: inline-block;
-      float: right; }
-  .list .list-element a .additional-info {
-    color: #9E9E9E;
-    font-size: 14px;
-    font-weight: 500; }
-  .list .list-element a:hover {
-    background-color: #EEEEEE; }
+      font-size: 14px;
+      font-weight: 500; }
+    .list .list-element a .details {
+      padding-top: 11px; }
+      .list .list-element a .details .details-other {
+        float: left;
+        clear: none;
+        text-align: inherit;
+        width: 74.25%;
+        margin-left: 0%;
+        margin-right: 3%; }
+        .list .list-element a .details .details-other::after {
+          content: '';
+          display: table;
+          clear: both; }
+        .list .list-element a .details .details-other:last-child {
+          margin-right: 0%; }
+        .list .list-element a .details .details-other .detail-other-inline {
+          float: left;
+          clear: none;
+          text-align: inherit;
+          width: 22.75%;
+          margin-left: 0%;
+          margin-right: 3%; }
+          .list .list-element a .details .details-other .detail-other-inline::after {
+            content: '';
+            display: table;
+            clear: both; }
+          .list .list-element a .details .details-other .detail-other-inline:last-child {
+            margin-right: 0%; }
+        .list .list-element a .details .details-other .detail-other-note {
+          float: left;
+          clear: none;
+          text-align: inherit;
+          width: 100%;
+          margin-left: 0%;
+          margin-right: 3%; }
+          .list .list-element a .details .details-other .detail-other-note::after {
+            content: '';
+            display: table;
+            clear: both; }
+          .list .list-element a .details .details-other .detail-other-note:last-child {
+            margin-right: 0%; }
+      .list .list-element a .details .details-reminders {
+        float: left;
+        clear: none;
+        text-align: inherit;
+        width: 22.75%;
+        margin-left: 0%;
+        margin-right: 3%; }
+        .list .list-element a .details .details-reminders::after {
+          content: '';
+          display: table;
+          clear: both; }
+        .list .list-element a .details .details-reminders:last-child {
+          margin-right: 0%; }
+      .list .list-element a .details .label {
+        color: #757575;
+        font-size: 16px; }
+        .list .list-element a .details .label i {
+          font-size: 22px;
+          margin-right: 10px; }
+    .list .list-element a:hover {
+      background-color: #EEEEEE; }
+
+.new-task-panel {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 3%; }
+  .new-task-panel::after {
+    content: '';
+    display: table;
+    clear: both; }
+  .new-task-panel:last-child {
+    margin-right: 0%; }
 
 .no-tasks {
   padding: 0px 30px;
@@ -124,4 +247,4 @@ html, body {
   line-height: 60px;
   font-size: 32px;
   background-color: #f39c12;
-  box-shadow: 0 4px 12px rgba(127, 0, 0, 0.2); }
+  box-shadow: 0 4px 12px rgba(127, 0, 0, 0.1); }
