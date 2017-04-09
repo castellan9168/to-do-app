@@ -42,7 +42,7 @@
   <div>
     <ul class="list" ng-show="showList">
       <li ng-repeat='task in tasksList | filter: projectFilter' class="list-element">
-        <a href="" ng-click="taskDetails()">
+        <a ng-click="task.detailed = !task.detailed">
           <div class="content">
             <div class="name-and-date">
               <span class="task-name">{{task.name}}</span> <span class="due-date">{{task.displayDate}}</span> 
@@ -50,6 +50,9 @@
             <div class="additional-info">
               <span>{{task.project}}</span>
             </div>
+          </div>
+          <div class="details" ng-if="task.detailed">
+            Lorem ipsum
           </div>
         </a> 
       </li>

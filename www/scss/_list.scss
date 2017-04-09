@@ -53,6 +53,7 @@
 	.list-element {
 		a {
 			display: block;
+			cursor: pointer;
 			text-decoration: none;
 			padding: 15px $outer-padding;
 			color: #212121;
@@ -75,6 +76,10 @@
 
 			&:hover {
 				background-color: $background-on-hover;
+			}
+
+			& .details {
+				//display: none;
 			}
 		}
 	}

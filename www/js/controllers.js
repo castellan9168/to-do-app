@@ -2,7 +2,7 @@ angular.module('toDoApp')
 
 .controller('mainController', function($scope, $rootScope, saveTaskService, retrieveTasksFactory) {
 	var newTaskPopUp = document.getElementById('new-task-pop-up'),
-		filterProjecTypeDropdown = document.getElementById('filter-project-type-dropdown');
+		filterProjectTypeDropdown = document.getElementById('filter-project-type-dropdown');
 	$scope.task = {
 		name: '',
 		project: '',
@@ -23,12 +23,13 @@ angular.module('toDoApp')
 	.then(function (tasks) {
 		$rootScope.tasksList = tasks;
 		if (tasks.length > 0) $scope.showList = true;
-		console.log($rootScope.tasksList); //log
+		//console.log($rootScope.tasksList);
 	}, function (error) {
 		console.error(error);
 	});
 
 	$scope.newTask = function() {
+		console.log(newTaskPopUp);
 		newTaskPopUp.style.display = 'block';
 	};
 
@@ -40,8 +41,9 @@ angular.module('toDoApp')
 		filterProjecTypeDropdown.style.display = 'none';
 	};
 
-	$scope.taskDetails = function() {
-
+	$scope.taskDetails = function($event) {
+		var showDetails = document.getElementById($event.target.id + '-details');
+		showDetails.style.display = 'block';
 	};
 
 });

@@ -90,6 +90,7 @@ html, body {
 
 .list .list-element a {
   display: block;
+  cursor: pointer;
   text-decoration: none;
   padding: 15px 30px;
   color: #212121;
