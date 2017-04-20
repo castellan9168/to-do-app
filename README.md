@@ -13,3 +13,4 @@ A simple to-do-app with MEAN stack
 - [x] taskDetails($event) does not work every time
 - [ ] implement jeet-grid so that app is not full width, id doesn't look well 
 - [ ] finish configuring gulp-remove-code
+- [ ] move list element to separate component

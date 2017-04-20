@@ -2,28 +2,14 @@ angular.module('toDoApp')
 
 .component("newTaskModal", {
 	templateUrl: 'components/new-task-modal/newTaskModal.html',
-	controller: function($scope, $rootScope, saveTaskService, retrieveTasksFactory) {
-		var popup = document.getElementById('new-task-pop-up');
+	controller: 'newTaskModalController'
+})
 
-		$scope.closePopup = function() {
-			popup.style.display = 'none';
-		};
-
-		$scope.addNewTask = function() {
-		saveTaskService.addTask($scope.task).then(function(msg) {
-			console.log($scope.task); //log
-			$scope.closePopup();
-			retrieveTasksFactory.getTasksList()
-			.then(function (tasks) {
-				$rootScope.tasksList = tasks;
-				if (tasks.length > 0) showList = true;
-			}, function (error) {
-				console.error(error);
-			});
-		}, function(errMsg) {
-			alert('Unable to add new task');
-		});
-	};
-
-	}
+.component("taskListElement", {
+	templateUrl: 'components/task-list-element/taskListElement.html',
+	bindings: {
+		data: '='
+	},
+	//scope: {},
+	controller: 'taskListElementController'
 });

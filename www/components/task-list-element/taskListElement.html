@@ -1,0 +1,38 @@
+<li class="list-element">
+	<a ng-click="task.detailed = !task.detailed">
+		<div class="content">
+			<div class="name-and-date">
+			    <span class="task-name">{{$ctrl.data.name}}</span><span class="due-date">{{$ctrl.data.displayDate}}</span>
+			  </div>
+			  <div class="additional-info">
+			    <span>{{$ctrl.data.project}}</span>
+			  </div>
+			</div>
+			<div class="details" ng-if="task.detailed">
+			  	<div class="details-other">
+				    <div class="detail-other-inline">
+					      <div class="label"><i class="fa fa-flag-o" aria-hidden="true"></i>Priority</div>
+					      <span>{{$ctrl.data.priority}}</span>
+				    </div>
+				    <div class="detail-other-inline">
+					      <div class="label"><i class="fa fa-level-up" aria-hidden="true"></i>Parent</div>
+					      <span>{{$ctrl.data.parent}}</span>
+				    </div>
+				    <div class="detail-other-inline">
+					      <div class="label"><i class="fa fa-tag" aria-hidden="true"></i>Tags</div>
+					      <span ng-if="task.tags.length != 0">{{$ctrl.data.tags}}</span>
+					      <span ng-if="task.tags.length == 0">No tags</span>
+				    </div>
+				    <div class="detail-other-note">
+					      <div class="label"><i class="fa fa-sticky-note-o" aria-hidden="true"></i>Notes</div>
+					      <span ng-if="task.comments">{{$ctrl.data.comments}}</span>
+					      <span ng-if="!task.comments">No comments</span>
+				    </div>
+			  	</div>
+			  	<div class="details-reminders">
+				    <div class="label"><i class="fa fa-clock-o" aria-hidden="true"></i>Reminders</div>
+				    <span>{{$ctrl.data.reminders}}</span>
+			  	</div>
+		</div>
+	</a>
+</li>
