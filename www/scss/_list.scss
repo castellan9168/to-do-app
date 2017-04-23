@@ -95,12 +95,23 @@
 					@include column(3/12);
 				}
 
-				.label {
-					color: #757575;
-					font-size: 16px;
+				.label-icon {
+					display: inline-block;
+					float: left;
+					color: $font-color-secondary;
 					i {
 						font-size: 22px;
 						margin-right: 10px;
+					}
+				}
+
+				.content {
+					display: inline-block;
+					
+					.label-name {
+						font-size: 16px;
+						color: $font-color-secondary;
+						padding-top: 7px;
 					}
 				}
 			}

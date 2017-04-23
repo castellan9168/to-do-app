@@ -11,29 +11,54 @@
 			<div class="details" ng-if="task.detailed">
 			  	<div class="details-other">
 				    <div class="detail-other-inline">
-					      <div class="label"><i class="fa fa-flag-o" aria-hidden="true"></i>Priority</div>
-					      <span>{{$ctrl.data.priority}}</span>
+					      <div class="label-icon"><i class="fa fa-flag-o" aria-hidden="true"></i></div>
+					      <div class="content">
+							<div class="label-name">Priority</div>
+							<div class="content-details">
+								<span>{{$ctrl.data.priority}}</span>
+							</div>
+					      </div>
 				    </div>
 				    <div class="detail-other-inline">
-					      <div class="label"><i class="fa fa-level-up" aria-hidden="true"></i>Parent</div>
-					      <span ng-if="$ctrl.data.parent">{{$ctrl.data.parent}}</span>
-					      <span ng-if="!$ctrl.data.parent">No parent</span>
+					      <div class="label-icon"><i class="fa fa-level-up" aria-hidden="true"></i></div>
+					      <div class="content">
+					      	<div class="label-name">Parent</div>
+					      	<div class="content-details">
+					      		<span ng-if="$ctrl.data.parent">{{$ctrl.data.parent}}</span>
+					      		<span ng-if="!$ctrl.data.parent">No parent</span>
+					      	</div>
+					      </div>
 				    </div>
 				    <div class="detail-other-inline">
-					      <div class="label"><i class="fa fa-tag" aria-hidden="true"></i>Tags</div>
-					      <span ng-if="$ctrl.data.tags.length != 0">{{$ctrl.data.tags}}</span>
-					      <span ng-if="$ctrl.data.tags.length == 0">No tags</span>
+					      <div class="label-icon"><i class="fa fa-tag" aria-hidden="true"></i></div>
+					      <div class="content">
+					      	<div class="label-name">Tags</div>
+					      	<div class="content-details">
+					      		<span ng-if="$ctrl.data.tags.length != 0">{{$ctrl.data.tags}}</span>
+					      		<span ng-if="$ctrl.data.tags.length == 0">No tags</span>
+					      	</div>
+					      </div>
 				    </div>
 				    <div class="detail-other-note">
-					      <div class="label"><i class="fa fa-sticky-note-o" aria-hidden="true"></i>Notes</div>
-					      <span ng-if="$ctrl.data.comments">{{$ctrl.data.comments}}</span>
-					      <span ng-if="!$ctrl.data.comments">No comments</span>
+					      <div class="label-icon"><i class="fa fa-sticky-note-o" aria-hidden="true"></i></div>
+					      <div class="content">
+					      	<div class="label-name">Notes</div>
+					      	<div class="content-details">
+						      <span ng-if="$ctrl.data.comments">{{$ctrl.data.comments}}</span>
+						      <span ng-if="!$ctrl.data.comments">No comments</span>
+					      	</div>
+					      </div>
 				    </div>
 			  	</div>
 			  	<div class="details-reminders">
-				    <div class="label"><i class="fa fa-clock-o" aria-hidden="true"></i>Reminders</div>
-				    <span ng-if="$ctrl.data.reminders.length != 0">{{$ctrl.data.reminders}}</span>
-				    <span ng-if="$ctrl.data.reminders.length == 0">No reminders</span>
+				    <div class="label-icon"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+				    <div class="content">
+				    	<div class="label-name">Reminders</div>
+				    	<div class="content-details">
+						    <span ng-if="$ctrl.data.reminders.length != 0">{{$ctrl.data.reminders}}</span>
+						    <span ng-if="$ctrl.data.reminders.length == 0">No reminders</span>
+				    	</div>
+				    </div>
 			  	</div>
 		</div>
 	</a>

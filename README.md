@@ -1,7 +1,7 @@
 A simple to-do-app with MEAN stack
 
-- [ ] change popup into an angular module
-- [ ] make the popUp of the new task close automatically after adding a task
+- [x] change popup into an angular component
+- [x] make the popUp of the new task close automatically after adding a task
 - [x] auto refresh list after adding new task
 - [x] send data to database in form dd-mm-yyyy
 - [x] only show text "You have no tasks" if user has no tasks on the list

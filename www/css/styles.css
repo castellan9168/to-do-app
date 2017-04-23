@@ -208,12 +208,19 @@ html, body {
           clear: both; }
         .list .list-element a .details .details-reminders:last-child {
           margin-right: 0%; }
-      .list .list-element a .details .label {
-        color: #757575;
-        font-size: 16px; }
-        .list .list-element a .details .label i {
+      .list .list-element a .details .label-icon {
+        display: inline-block;
+        float: left;
+        color: #757575; }
+        .list .list-element a .details .label-icon i {
           font-size: 22px;
           margin-right: 10px; }
+      .list .list-element a .details .content {
+        display: inline-block; }
+        .list .list-element a .details .content .label-name {
+          font-size: 16px;
+          color: #757575;
+          padding-top: 7px; }
     .list .list-element a:hover {
       background-color: #EEEEEE; }
 
