@@ -10,6 +10,5 @@ angular.module('toDoApp')
 	bindings: {
 		data: '='
 	},
-	//scope: {},
 	controller: 'taskListElementController'
 });

@@ -11,6 +11,8 @@ A simple to-do-app with MEAN stack
 - [ ] for some reason list does not auto-refresh after adding first task to an empty list
 - [ ] add edit functionality for the task
 - [x] taskDetails($event) does not work every time
-- [ ] implement jeet-grid so that app is not full width, id doesn't look well 
+- [x] implement jeet-grid so that app is not full width, id doesn't look well 
 - [ ] finish configuring gulp-remove-code
-- [ ] move list element to separate component
+- [x] move list element to separate component
+- [x] reminders are saved incorrectly in database
+- [ ] tags and reminders are displayed as arrays in app view
