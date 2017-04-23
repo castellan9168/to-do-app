@@ -16,7 +16,8 @@
 				    </div>
 				    <div class="detail-other-inline">
 					      <div class="label"><i class="fa fa-level-up" aria-hidden="true"></i>Parent</div>
-					      <span>{{$ctrl.data.parent}}</span>
+					      <span ng-if="$ctrl.data.parent">{{$ctrl.data.parent}}</span>
+					      <span ng-if="!$ctrl.data.parent">No parent</span>
 				    </div>
 				    <div class="detail-other-inline">
 					      <div class="label"><i class="fa fa-tag" aria-hidden="true"></i>Tags</div>
@@ -31,8 +32,8 @@
 			  	</div>
 			  	<div class="details-reminders">
 				    <div class="label"><i class="fa fa-clock-o" aria-hidden="true"></i>Reminders</div>
-				    <span ng-if="$ctrl.data.reminders">{{$ctrl.data.reminders}}</span>
-				    <span ng-if="!$ctrl.data.reminders">No reminders</span>
+				    <span ng-if="$ctrl.data.reminders.length != 0">{{$ctrl.data.reminders}}</span>
+				    <span ng-if="$ctrl.data.reminders.length == 0">No reminders</span>
 			  	</div>
 		</div>
 	</a>

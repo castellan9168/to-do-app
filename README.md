@@ -16,3 +16,5 @@ A simple to-do-app with MEAN stack
 - [x] move list element to separate component
 - [x] reminders are saved incorrectly in database
 - [ ] tags and reminders are displayed as arrays in app view
+- [x] Information should be given in each element of task details, that no information will be provided (e.g. "No comments", "No priority set")
+- [x] If no priority has been set by the user, set the default value to the lowest priority "4"

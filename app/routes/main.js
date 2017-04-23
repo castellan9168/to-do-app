@@ -31,7 +31,7 @@ router.post('/newTask', function(req, res) {
 			project: req.body.project,
 			date: req.body.date,
 			displayDate: weekDay + ' ' + date.getDate() + ' ' + month + ' ' + date.getFullYear(),
-			priority: req.body.priority,
+			priority: req.body.priority || 4,
 			tags: req.body.tags,
 			parent: req.body.parent,
 			comments: req.body.comments,
