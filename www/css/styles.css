@@ -56,11 +56,39 @@ html, body {
     padding: 10px;
     cursor: pointer; }
 
+#side-navigation {
+  height: 100%;
+  display: none;
+  position: fixed;
+  width: 100%;
+  overflow-x: hidden;
+  z-index: 1; }
+  #side-navigation .side-menu {
+    display: inline-block;
+    position: absolute;
+    background-color: #FFFFFF;
+    height: 100%;
+    width: 30%;
+    padding: 20px; }
+    #side-navigation .side-menu .close-button {
+      display: inline-block;
+      float: right;
+      font-size: 32px;
+      color: #757575; }
+  #side-navigation .shadow-cover {
+    display: inline-block;
+    position: absolute;
+    height: 100%;
+    width: 70%;
+    right: 0;
+    background-color: rgba(44, 62, 80, 0.3); }
+
 .navigation {
   background-color: #e74c3c;
   padding: 13px 30px;
   margin-bottom: 30px;
-  box-shadow: 0 4px 12px rgba(127, 0, 0, 0.1); }
+  box-shadow: 0 4px 12px rgba(127, 0, 0, 0.1);
+  display: block; }
   .navigation a {
     color: #ffffff; }
   .navigation .nav-left {

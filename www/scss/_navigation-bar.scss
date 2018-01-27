@@ -1,9 +1,10 @@
 .navigation {
-	
-	background-color: #e74c3c;
+
+	background-color: $primary-red;
 	padding: 13px $outer-padding;
 	margin-bottom: 30px;
 	box-shadow: $drop-shadow;
+	display: block;
 
 	& a {
 		color: #ffffff;
@@ -11,7 +12,7 @@
 
 	.nav-left {
 		display: inline-block;
-		
+
 	}
 
 	.nav-right {

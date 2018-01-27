@@ -8,16 +8,16 @@ angular.module('toDoApp')
 	};
 
 	$scope.addNewTask = function() {
-	saveTaskService.addTask($scope.task).then(function(msg) {
-		console.log($scope.task); //log
-		$scope.closePopup();
-		retrieveTasksFactory.getTasksList()
-		.then(function (tasks) {
-			$rootScope.tasksList = tasks;
-			if (tasks.length > 0) showList = true;
-		}, function (error) {
-			console.error(error);
-		});
+		saveTaskService.addTask($scope.task).then(function(msg) {
+			console.log($scope.task); //log
+			$scope.closePopup();
+			retrieveTasksFactory.getTasksList()
+			.then(function (tasks) {
+				$rootScope.tasksList = tasks;
+				if (tasks.length > 0) showList = true;
+			}, function (error) {
+				console.error(error);
+			});
 	}, function(errMsg) {
 		alert('Unable to add new task');
 	});

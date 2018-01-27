@@ -19,3 +19,13 @@ angular.module('toDoApp')
 	};
 
 });
+
+angular.module('toDoApp')
+
+.service('sharedProperties', function() {
+	var sideNav = document.getElementById('side-navigation');
+
+	return {
+		sideNav : sideNav
+	}
+});
