@@ -14,6 +14,10 @@ angular.module('toDoApp')
 		});
 	};
 
+	var removeTask = function(task) {
+
+	};
+
 	return {
 		addTask: addTask
 	};

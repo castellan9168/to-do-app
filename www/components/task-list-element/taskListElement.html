@@ -1,65 +1,67 @@
-<li class="list-element">
-	<a ng-click="task.detailed = !task.detailed">
-		<div class="content">
-			<div class="name-and-date">
-			    <span class="task-name">{{$ctrl.data.name}}</span><span class="due-date">{{$ctrl.data.displayDate}}</span>
-			  </div>
-			  <div class="additional-info">
-			    <span>{{$ctrl.data.project}}</span>
-			  </div>
-			</div>
-			<div class="details" ng-if="task.detailed">
-			  	<div class="details-other">
-				    <div class="detail-other-inline">
-					      <div class="label">
-					      	<i class="fa fa-flag-o" aria-hidden="true"></i>
-					      	<span class="label-name">Priority</span>
-				      	  </div>
-					      <div class="content">
-					      	<span>{{$ctrl.data.priority}}</span>
-					      </div>
-				    </div>
-				    <div class="detail-other-inline">
-					      <div class="label">
-					      	<i class="fa fa-level-up" aria-hidden="true"></i>
-					      	<span class="label-name">Parent</span>
-					      </div>
-					      <div class="content">
-				      		<span ng-if="$ctrl.data.parent">{{$ctrl.data.parent}}</span>
-				      		<span ng-if="!$ctrl.data.parent">No parent</span>
-					      </div>
-				    </div>
-				    <div class="detail-other-inline">
-					      <div class="label">
-					      	<i class="fa fa-tag" aria-hidden="true"></i>
-					      	<span class="label-name">Tags</span>
-					      </div>
-					      <div class="content">
-				      		<span ng-if="$ctrl.data.tags.length != 0" ng-repeat="tag in $ctrl.data.tags">{{tag}}</span>
-				      		<span ng-if="$ctrl.data.tags.length == 0">No tags</span>
-					      </div>
-				    </div>
-				    <div class="detail-other-note">
-					      <div class="label">
-					      	<i class="fa fa-sticky-note-o" aria-hidden="true"></i>
-					      	<span class="label-name">Notes</span>
-				      	  </div>
-					      <div class="content">
-						      <span ng-if="$ctrl.data.comments">{{$ctrl.data.comments}}</span>
-						      <span ng-if="!$ctrl.data.comments">No comments</span>
-					      </div>
-				    </div>
-			  	</div>
-			  	<div class="details-reminders">
-				    <div class="label">
-				    	<i class="fa fa-clock-o" aria-hidden="true"></i>
-				    	<span class="label-name">Reminders</span>
-				    </div>
-				    <div class="content">
-					    <span ng-if="$ctrl.data.reminders.length != 0" ng-repeat="reminder in $ctrl.data.reminders">{{reminder}}</span>
-					    <span ng-if="$ctrl.data.reminders.length == 0">No reminders</span>
-				    </div>
-			  	</div>
+<li class="list-element" ng-click="task.detailed = !task.detailed">
+	<div class="content">
+		<div class="name-and-date">
+		    <span class="task-name">{{$ctrl.data.name}}</span><span class="due-date">{{$ctrl.data.displayDate}}</span>
 		</div>
-	</a>
+		<div class="edit-panel">
+			<a href="" ng-click="confirm()"><i class="fa fa-check" aria-hidden="true"></i></a>
+			<a href="" ng-click="delete()"><i class="fa fa-trash" aria-hidden="true"></i></a>
+		</div>
+		<div class="additional-info">
+	    	<span>{{$ctrl.data.project}}</span>
+		</div>
+	</div>
+	<div class="details" ng-if="task.detailed">
+	  	<div class="details-other">
+		    <div class="detail-other-inline">
+			      <div class="label">
+			      	<i class="fa fa-flag-o" aria-hidden="true"></i>
+			      	<span class="label-name">Priority</span>
+		      	  </div>
+			      <div class="content">
+			      	<span>{{$ctrl.data.priority}}</span>
+			      </div>
+		    </div>
+		    <div class="detail-other-inline">
+			      <div class="label">
+			      	<i class="fa fa-level-up" aria-hidden="true"></i>
+			      	<span class="label-name">Parent</span>
+			      </div>
+			      <div class="content">
+		      		<span ng-if="$ctrl.data.parent">{{$ctrl.data.parent}}</span>
+		      		<span ng-if="!$ctrl.data.parent">No parent</span>
+			      </div>
+		    </div>
+		    <div class="detail-other-inline">
+			      <div class="label">
+			      	<i class="fa fa-tag" aria-hidden="true"></i>
+			      	<span class="label-name">Tags</span>
+			      </div>
+			      <div class="content">
+		      		<span ng-if="$ctrl.data.tags.length != 0" ng-repeat="tag in $ctrl.data.tags">{{tag}}</span>
+		      		<span ng-if="$ctrl.data.tags.length == 0">No tags</span>
+			      </div>
+		    </div>
+		    <div class="detail-other-note">
+			      <div class="label">
+			      	<i class="fa fa-sticky-note-o" aria-hidden="true"></i>
+			      	<span class="label-name">Notes</span>
+		      	  </div>
+			      <div class="content">
+				      <span ng-if="$ctrl.data.comments">{{$ctrl.data.comments}}</span>
+				      <span ng-if="!$ctrl.data.comments">No comments</span>
+			      </div>
+		    </div>
+	  	</div>
+	  	<div class="details-reminders">
+		    <div class="label">
+		    	<i class="fa fa-clock-o" aria-hidden="true"></i>
+		    	<span class="label-name">Reminders</span>
+		    </div>
+		    <div class="content">
+			    <span ng-if="$ctrl.data.reminders.length != 0" ng-repeat="reminder in $ctrl.data.reminders">{{reminder}}</span>
+			    <span ng-if="$ctrl.data.reminders.length == 0">No reminders</span>
+		    </div>
+	  	</div>
+	</div>
 </li>

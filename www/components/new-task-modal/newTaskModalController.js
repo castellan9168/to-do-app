@@ -9,7 +9,6 @@ angular.module('toDoApp')
 
 	$scope.addNewTask = function() {
 		saveTaskService.addTask($scope.task).then(function(msg) {
-			console.log($scope.task); //log
 			$scope.closePopup();
 			retrieveTasksFactory.getTasksList()
 			.then(function (tasks) {

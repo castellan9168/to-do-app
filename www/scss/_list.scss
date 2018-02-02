@@ -1,6 +1,6 @@
 .list-header {
 	padding: 18px $outer-padding;
-	div {	
+	div {
 		display: inline-block;
 		color: #e74c3c;
 		text-decoration: none;
@@ -52,76 +52,79 @@
 .list {
 	@include column(1);
 	list-style-type: none;
-	
+
 	.list-element {
-		a {
-			@include column(1);
-			display: block;
-			cursor: pointer;
-			text-decoration: none;
-			font-size: 22px;
-			padding: 15px $outer-padding;
-			color: #212121;
-			border-bottom: 1px solid #E0E0E0;
+		@include column(1);
+		display: block;
+		cursor: pointer;
+		text-decoration: none;
+		font-size: 22px;
+		padding: 15px $outer-padding;
+		color: #212121;
+		border-bottom: 1px solid #E0E0E0;
 
-			.name-and-date {
-				padding-bottom: 5px;
-				.due-date {
-					color: #9E9E9E;
-					display: inline-block;
-					float: right;
-				}
-			}
-
-			.additional-info {
+		.name-and-date {
+			padding-bottom: 5px;
+			display: inline-block;
+			.due-date {
 				color: #9E9E9E;
-				font-size: 14px;
-				font-weight: 500;
+				float: right;
 			}
-			
-			.details {
-				padding-top: 11px;
-				.details-other {
-					@include column(9/12);
-					.detail-other-inline{
-						@include column(3/12);
-						margin-bottom: 20px;
-					}
-					.detail-other-note {
-						@include column(1);
-					}
-				}
+		}
 
-				.details-reminders {
+		.edit-panel {
+			display: inline-block;
+			float: right;
+		}
+
+		.additional-info {
+			color: #9E9E9E;
+			font-size: 14px;
+			font-weight: 500;
+		}
+
+		.details {
+			padding-top: 11px;
+			.details-other {
+				@include column(9/12);
+				.detail-other-inline{
 					@include column(3/12);
+					margin-bottom: 20px;
 				}
-
-				.label {
-					color: $font-color-secondary;
-					height: 24px;
-					i {
-						font-size: 22px;
-						line-height: 24px;
-						margin-right: 5px;
-					}
-
-					.label-name {
-						font-size: 16px;
-						//vertical-align: middle;
-						display: inline-block;
-						line-height: 24px;
-					}
-				}
-
-				.content {
-					padding-left: 5px;
-					padding-top: 5px;
+				.detail-other-note {
+					@include column(1);
 				}
 			}
 
-			&:hover {
-				background-color: $background-on-hover;
+			.details-reminders {
+				@include column(3/12);
 			}
+
+			.label {
+				color: $font-color-secondary;
+				height: 24px;
+				i {
+					font-size: 22px;
+					line-height: 24px;
+					margin-right: 5px;
+				}
+
+				.label-name {
+					font-size: 16px;
+					//vertical-align: middle;
+					display: inline-block;
+					line-height: 24px;
+				}
+			}
+
+			.content {
+				padding-left: 5px;
+				padding-top: 5px;
+			}
+		}
+
+		&:hover {
+			background-color: $background-on-hover;
 		}
 	}
 }

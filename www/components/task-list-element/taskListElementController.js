@@ -1,5 +1,12 @@
 angular.module('toDoApp')
 
 .controller('taskListElementController', function($scope) {
-	$scope.test = 'Testowy element w scopie';
+	$scope.confirm = function() {
+		event.stopPropagation();
+		
+	}
+
+	$scope.delete = function() {
+		event.stopPropagation();
+	}
 });

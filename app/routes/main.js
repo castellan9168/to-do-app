@@ -8,10 +8,6 @@ router.get('/test', function(req, res) {
 	res.send('Good morning! The api is at http://localhost:' + port + '/api');
 });
 
-router.get('/hello', function(req, res) {
-	res.send('Hello user!');
-});
-
 //create a new task in your calendar
 router.post('/newTask', function(req, res) {
 	if(!req.body.name) {
@@ -23,8 +19,6 @@ router.post('/newTask', function(req, res) {
 
 		var weekDay = weekDays[date.getDay()];
 		var month = months[date.getMonth()];
-
-		console.log(date, month); // new line
 
 		var newTask = new Task({
 			name: req.body.name,
@@ -46,6 +40,11 @@ router.post('/newTask', function(req, res) {
 		});
 	}
 });
+
+router.post('/removeTask', function(req, res) {
+	res.send('Zalążek funkcji do usuwania wpisu');
+	database.deleteOne({"name": "Pierwsze"});	
+})
 
 router.get('/tasksList', function(req, res) {
 	Task.find({}, function(err, tasks) {

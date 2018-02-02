@@ -6,6 +6,10 @@
 	overflow-x: hidden;
 	z-index: 1;
 
+	a {
+		color: $font-color-primary;
+	}
+
 	.side-menu {
 		display: inline-block;
 		position:absolute;

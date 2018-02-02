@@ -26,13 +26,11 @@ angular.module('toDoApp')
 	.then(function (tasks) {
 		$rootScope.tasksList = tasks;
 		if (tasks.length > 0) $scope.showList = true;
-		console.log($rootScope.tasksList);
 	}, function (error) {
 		console.error(error);
 	});
 
 	$scope.newTask = function() {
-		//console.log(newTaskPopUp);
 		newTaskPopUp.style.display = 'block';
 	};
 

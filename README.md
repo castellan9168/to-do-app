@@ -14,3 +14,4 @@ A simple to-do-app with MEAN stack
 - [ ] add feature to have more than one tag and reminder for the task
 - [ ] create side menu
 - [ ] side menu color has wrong color, css style does not apply
+- [ ] I don't understand why after POST the user connects two times with database to retrieve list of tasks

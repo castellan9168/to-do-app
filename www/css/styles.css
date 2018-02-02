@@ -63,6 +63,8 @@ html, body {
   width: 100%;
   overflow-x: hidden;
   z-index: 1; }
+  #side-navigation a {
+    color: #212121; }
   #side-navigation .side-menu {
     display: inline-block;
     position: absolute;
@@ -152,7 +154,7 @@ html, body {
     clear: both; }
   .list:last-child {
     margin-right: 0%; }
-  .list .list-element a {
+  .list .list-element {
     float: left;
     clear: none;
     text-align: inherit;
@@ -166,38 +168,41 @@ html, body {
     padding: 15px 30px;
     color: #212121;
     border-bottom: 1px solid #E0E0E0; }
-    .list .list-element a::after {
+    .list .list-element::after {
       content: '';
       display: table;
       clear: both; }
-    .list .list-element a:last-child {
+    .list .list-element:last-child {
       margin-right: 0%; }
-    .list .list-element a .name-and-date {
-      padding-bottom: 5px; }
-      .list .list-element a .name-and-date .due-date {
+    .list .list-element .name-and-date {
+      padding-bottom: 5px;
+      display: inline-block; }
+      .list .list-element .name-and-date .due-date {
         color: #9E9E9E;
-        display: inline-block;
         float: right; }
-    .list .list-element a .additional-info {
+    .list .list-element .edit-panel {
+      display: inline-block;
+      float: right; }
+    .list .list-element .additional-info {
       color: #9E9E9E;
       font-size: 14px;
       font-weight: 500; }
-    .list .list-element a .details {
+    .list .list-element .details {
       padding-top: 11px; }
-      .list .list-element a .details .details-other {
+      .list .list-element .details .details-other {
         float: left;
         clear: none;
         text-align: inherit;
         width: 74.25%;
         margin-left: 0%;
         margin-right: 3%; }
-        .list .list-element a .details .details-other::after {
+        .list .list-element .details .details-other::after {
           content: '';
           display: table;
           clear: both; }
-        .list .list-element a .details .details-other:last-child {
+        .list .list-element .details .details-other:last-child {
           margin-right: 0%; }
-        .list .list-element a .details .details-other .detail-other-inline {
+        .list .list-element .details .details-other .detail-other-inline {
           float: left;
           clear: none;
           text-align: inherit;
@@ -205,53 +210,53 @@ html, body {
           margin-left: 0%;
           margin-right: 3%;
           margin-bottom: 20px; }
-          .list .list-element a .details .details-other .detail-other-inline::after {
+          .list .list-element .details .details-other .detail-other-inline::after {
             content: '';
             display: table;
             clear: both; }
-          .list .list-element a .details .details-other .detail-other-inline:last-child {
+          .list .list-element .details .details-other .detail-other-inline:last-child {
             margin-right: 0%; }
-        .list .list-element a .details .details-other .detail-other-note {
+        .list .list-element .details .details-other .detail-other-note {
           float: left;
           clear: none;
           text-align: inherit;
           width: 100%;
           margin-left: 0%;
           margin-right: 3%; }
-          .list .list-element a .details .details-other .detail-other-note::after {
+          .list .list-element .details .details-other .detail-other-note::after {
             content: '';
             display: table;
             clear: both; }
-          .list .list-element a .details .details-other .detail-other-note:last-child {
+          .list .list-element .details .details-other .detail-other-note:last-child {
             margin-right: 0%; }
-      .list .list-element a .details .details-reminders {
+      .list .list-element .details .details-reminders {
         float: left;
         clear: none;
         text-align: inherit;
         width: 22.75%;
         margin-left: 0%;
         margin-right: 3%; }
-        .list .list-element a .details .details-reminders::after {
+        .list .list-element .details .details-reminders::after {
           content: '';
           display: table;
           clear: both; }
-        .list .list-element a .details .details-reminders:last-child {
+        .list .list-element .details .details-reminders:last-child {
           margin-right: 0%; }
-      .list .list-element a .details .label {
+      .list .list-element .details .label {
         color: #757575;
         height: 24px; }
-        .list .list-element a .details .label i {
+        .list .list-element .details .label i {
           font-size: 22px;
           line-height: 24px;
           margin-right: 5px; }
-        .list .list-element a .details .label .label-name {
+        .list .list-element .details .label .label-name {
           font-size: 16px;
           display: inline-block;
           line-height: 24px; }
-      .list .list-element a .details .content {
+      .list .list-element .details .content {
         padding-left: 5px;
         padding-top: 5px; }
-    .list .list-element a:hover {
+    .list .list-element:hover {
       background-color: #EEEEEE; }
 
 .new-task-panel {
