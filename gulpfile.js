@@ -3,6 +3,7 @@ var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
 var nodemon = require('gulp-nodemon');
 var removeCode = require('gulp-remove-code');
+var reload = browserSync.reload;
 
 gulp.task('browserSync', ['nodemon'], function() {
 	browserSync.init(null, {
@@ -14,16 +15,26 @@ gulp.task('browserSync', ['nodemon'], function() {
 	});
 });
 
-gulp.task('nodemon', function() {
+gulp.task('nodemon', function(cb) {
 	var started = false;
 
 	return nodemon({
-		script: 'server.js'
-	}).on('start', function() {
+		script: 'server.js',
+		ignore: [
+			'gulpfile.js',
+			'node_modules/'
+		]
+	})
+	.on('start', function() {
 		if(!started) {
-			cb();
 			started = true;
+			cb();
 		}
+	})
+	.on('restart', function() {
+		setTimeout(function () {
+			reload({stream: false});
+		}, 1000);
 	});
 });
 

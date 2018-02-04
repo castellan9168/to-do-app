@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var Task = require('../models/task');
 var config = require('../../config/database');
+var db = config.database;
 var port = process.env.PORT || 8080;
 
 router.get('/test', function(req, res) {
@@ -41,10 +42,34 @@ router.post('/newTask', function(req, res) {
 	}
 });
 
-router.post('/removeTask', function(req, res) {
-	res.send('Zalążek funkcji do usuwania wpisu');
-	database.deleteOne({"name": "Pierwsze"});	
+
+// I do not understand why this code worked while I could not just use deleteOne
+// method.
+router.delete('/removeTask', function(req, res) {
+	Task.findOne({"name":"Drugie"}, function (err, task) {
+		if (err) res.send(err);
+
+		task.remove(function(err) {
+			if (err) res.send(err);
+
+			res.json({message: 'Task deleted'});
+		})
+	});
 })
+
+router.put('/updateTask', function(req, res) {
+	Task.findOne({"name":"Trzecie"}, function(err, task) {
+		if (err) res.send(err);
+
+		task.name = "Changed third";
+
+		task.save(function(err) {
+			if (err) res.send(err);
+
+			res.json({ message: 'Task updated'})
+		})
+	})
+});
 
 router.get('/tasksList', function(req, res) {
 	Task.find({}, function(err, tasks) {

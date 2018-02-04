@@ -15,7 +15,15 @@ angular.module('toDoApp')
 	};
 
 	var removeTask = function(task) {
-
+		return $q(function(resolve, reject) {
+			$http.delete(API_ENDPOINT.url+ '/removeTask', task).then(function(result) {
+				if (result.data.success) {
+					resolve(result.data.msg);
+				} else {
+					reject(result.data.msg);
+				}
+			})
+		})
 	};
 
 	return {

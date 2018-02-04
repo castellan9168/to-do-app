@@ -9,7 +9,6 @@ var task = require('./app/models/task'); // get the task model
 var config = require('./config/database'); // database configuration
 var port = process.env.PORT || 8080; // set our port
 //var port = 3001; // set our port
-var express = require('express');
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
@@ -33,6 +32,7 @@ app.use(function (req, res, next) {
 	}
 });
 
+// Connection with the database
 mongoose.connect(config.database);
 
 //routes
