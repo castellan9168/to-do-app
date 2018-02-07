@@ -26,9 +26,22 @@ angular.module('toDoApp')
 		})
 	};
 
+	var completeTask = function(task) {
+		return $q(function(resolve, reject) {
+			$http.put(API_ENDPOINT.url + '/completeTask', task).then(function(result) {
+				if (result.data.success) {
+					resolve(result.data.msg);
+				} else {
+					reject(result.data.msg);
+				}
+			})
+		})
+	};
+
 	return {
 		addTask: addTask,
-		removeTask: removeTask
+		removeTask: removeTask,
+		completeTask: completeTask
 	};
 
 });

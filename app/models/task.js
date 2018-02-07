@@ -1,6 +1,10 @@
 var mongoose = require('mongoose');
 
 var taskSchema = new mongoose.Schema({
+	completed: {
+		type: Boolean,
+		default: false
+	},
 	name: {
 		type: String,
 		required: true

@@ -55,16 +55,16 @@ router.post('/removeTask', function(req, res) {
 	});
 })
 
-router.put('/updateTask', function(req, res) {
-	Task.findOne({"name":"Czwarte"}, function(err, task) {
+router.put('/completeTask', function(req, res) {
+	Task.findOne({'_id': req.body._id}, function(err, task) {
 		if (err) res.send(err);
 
-		task.name = "Changed fourth";
+		task.completed = true;
 
 		task.save(function(err) {
-			if (err) res.send(err);
+			if (err) return res.json({success: false, msg: 'Unable to update task'});
 
-			res.json({ message: 'Task updated'})
+			res.json({success: true,  msg: 'Task updated'});
 		})
 	})
 });
