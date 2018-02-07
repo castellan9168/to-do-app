@@ -1,6 +1,6 @@
 angular.module('toDoApp')
 
-.controller('mainController', function($scope, $rootScope, saveTaskService, retrieveTasksFactory) {
+.controller('mainController', function($scope, $rootScope, taskActionsService, retrieveTasksFactory) {
 	var newTaskPopUp = document.getElementById('new-task-pop-up'),
 		filterProjectTypeDropdown = document.getElementById('filter-project-type-dropdown');
 

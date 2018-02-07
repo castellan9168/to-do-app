@@ -1,6 +1,6 @@
 angular.module('toDoApp')
 
-.service('saveTaskService', function($q, $http, API_ENDPOINT) {
+.service('taskActionsService', function($q, $http, API_ENDPOINT) {
 
 	var addTask = function(task) {
 		return $q(function(resolve, reject) {
@@ -16,7 +16,7 @@ angular.module('toDoApp')
 
 	var removeTask = function(task) {
 		return $q(function(resolve, reject) {
-			$http.delete(API_ENDPOINT.url+ '/removeTask', task).then(function(result) {
+			$http.post(API_ENDPOINT.url+ '/removeTask', task).then(function(result) {
 				if (result.data.success) {
 					resolve(result.data.msg);
 				} else {
@@ -27,7 +27,8 @@ angular.module('toDoApp')
 	};
 
 	return {
-		addTask: addTask
+		addTask: addTask,
+		removeTask: removeTask
 	};
 
 });

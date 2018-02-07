@@ -42,26 +42,24 @@ router.post('/newTask', function(req, res) {
 	}
 });
 
-
 // I do not understand why this code worked while I could not just use deleteOne
 // method.
-router.delete('/removeTask', function(req, res) {
-	Task.findOne({"name":"Drugie"}, function (err, task) {
+router.post('/removeTask', function(req, res) {
+	Task.findOne({"_id": req.body._id}, function (err, task) {
 		if (err) res.send(err);
-
 		task.remove(function(err) {
-			if (err) res.send(err);
+			if (err) return res.json({success: false, msg: 'Unable to delete task'});
 
-			res.json({message: 'Task deleted'});
+			res.json({success: true,  msg: 'Task deleted'});
 		})
 	});
 })
 
 router.put('/updateTask', function(req, res) {
-	Task.findOne({"name":"Trzecie"}, function(err, task) {
+	Task.findOne({"name":"Czwarte"}, function(err, task) {
 		if (err) res.send(err);
 
-		task.name = "Changed third";
+		task.name = "Changed fourth";
 
 		task.save(function(err) {
 			if (err) res.send(err);
