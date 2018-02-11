@@ -10,8 +10,8 @@ html, body {
   display: block;
   margin-right: auto;
   margin-left: auto;
-  padding-left: 10px;
-  padding-right: 10px; }
+  padding-left: 20px;
+  padding-right: 20px; }
   .container::after {
     content: '';
     display: table;
@@ -137,7 +137,7 @@ html, body {
       cursor: pointer; }
 
 .list-header {
-  padding: 18px 30px; }
+  padding: 18px 0px; }
   .list-header div {
     display: inline-block;
     color: #e74c3c;
@@ -198,7 +198,7 @@ html, body {
     cursor: pointer;
     text-decoration: none;
     font-size: 22px;
-    padding: 15px 30px;
+    padding: 15px 0px;
     color: #212121;
     border-bottom: 1px solid #E0E0E0; }
     .list .list-element::after {

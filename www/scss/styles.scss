@@ -12,7 +12,7 @@ html, body {
 }
 
 .container {
-	@include center(940px, 10px);
+	@include center(940px, $offset);
 }
 
 * {
