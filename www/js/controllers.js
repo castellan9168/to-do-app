@@ -17,15 +17,19 @@ angular.module('toDoApp')
 
 	$scope.outerTest = 'Testowy zewnetrzny';
 
-	//$scope.projectFilter = {};
+	$rootScope.projectName = [];
 
 	$scope.showList = false;
 
 	$rootScope.tasksList = {};
 	retrieveTasksFactory.getTasksList()
 	.then(function (tasks) {
+		// var i;
+
 		$rootScope.tasksList = tasks;
 		if (tasks.length > 0) $scope.showList = true;
+
+		taskActionsService.getProjectsFilter();
 	}, function (error) {
 		console.error(error);
 	});

@@ -14,6 +14,7 @@ angular.module('toDoApp')
 			.then(function (tasks) {
 				$rootScope.tasksList = tasks;
 				if (tasks.length > 0) showList = true;
+				taskActionsService.getProjectsFilter();
 			}, function (error) {
 				console.error(error);
 			});

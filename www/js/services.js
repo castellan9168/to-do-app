@@ -1,6 +1,6 @@
 angular.module('toDoApp')
 
-.service('taskActionsService', function($q, $http, API_ENDPOINT) {
+.service('taskActionsService', function($q, $http, $rootScope, sharedProperties, API_ENDPOINT) {
 
 	var addTask = function(task) {
 		return $q(function(resolve, reject) {
@@ -38,10 +38,22 @@ angular.module('toDoApp')
 		})
 	};
 
+	var getProjectsFilter = function() {
+		var i;
+		// I am filling project's filter with values
+		for (i = 0; i < $rootScope.tasksList.length; i++) {
+			var temp = $rootScope.tasksList[i].project;
+			if ($rootScope.projectName.indexOf(temp) == -1) {
+				$rootScope.projectName.push(temp);
+			}
+		}
+	};
+
 	return {
 		addTask: addTask,
 		removeTask: removeTask,
-		completeTask: completeTask
+		completeTask: completeTask,
+		getProjectsFilter: getProjectsFilter
 	};
 
 });
