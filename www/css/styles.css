@@ -1,3 +1,24 @@
+/* Building grid overlay */
+html {
+  position: relative; }
+
+html::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  width: 940px;
+  max-width: 940px;
+  min-height: 100vh;
+  content: '';
+  background-image: repeating-linear-gradient(to right, rgba(126, 195, 241, 0.25), rgba(126, 195, 241, 0.25) 136.66667px, transparent 136.66667px, transparent 156.66667px);
+  background-size: 960px;
+  z-index: 1000;
+  pointer-events: none; }
+
 html, body {
   height: 100%;
   background-color: #EEEEEE;
@@ -174,19 +195,21 @@ html, body {
       clear: both; }
     .list .list-element:last-child {
       margin-right: 0%; }
-    .list .list-element .name-and-date {
+    .list .list-element .name {
       padding-bottom: 5px;
       display: inline-block; }
-      .list .list-element .name-and-date .due-date {
+      .list .list-element .name .due-date {
         color: #9E9E9E;
         float: right; }
     .list .list-element .edit-panel {
       display: inline-block;
       float: right; }
-    .list .list-element .additional-info {
+    .list .list-element .additional-info, .list .list-element .date {
       color: #9E9E9E;
       font-size: 14px;
       font-weight: 500; }
+    .list .list-element .date {
+      padding-bottom: 4px; }
     .list .list-element .details {
       padding-top: 11px; }
       .list .list-element .details .details-other {

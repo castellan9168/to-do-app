@@ -63,7 +63,7 @@
 		color: #212121;
 		border-bottom: 1px solid #E0E0E0;
 
-		.name-and-date {
+		.name{
 			padding-bottom: 5px;
 			display: inline-block;
 			.due-date {
@@ -77,10 +77,14 @@
 			float: right;
 		}
 
-		.additional-info {
+		.additional-info, .date {
 			color: #9E9E9E;
 			font-size: 14px;
 			font-weight: 500;
+		}
+
+		.date {
+			padding-bottom: 4px;
 		}
 
 		.details {

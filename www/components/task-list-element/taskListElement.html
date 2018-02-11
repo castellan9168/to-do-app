@@ -1,7 +1,8 @@
 <li class="list-element" ng-click="task.detailed = !task.detailed">
 	<div class="content">
-		<div class="name-and-date">
-		    <span class="task-name">{{$ctrl.data.name}}</span><span class="due-date">{{$ctrl.data.displayDate}}</span>
+		<div class="date"><span class="due-date">{{$ctrl.data.displayDate}}</span></div>
+		<div class="name">
+		    <span class="task-name">{{$ctrl.data.name}}</span>
 		</div>
 		<div class="edit-panel">
 			<a href="" ng-click="complete($ctrl.data)"><i class="fa fa-check" aria-hidden="true"></i></a>
