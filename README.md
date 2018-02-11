@@ -6,7 +6,6 @@ run command "mongod --dbpath database path" to connect to database
 A simple to-do-app with MEAN stack
 
 - [ ] build details page of a task
-- [ ] filter the list by project via project type select dropdown
 - [ ] add edit functionality for the task
 - [ ] finish configuring gulp-remove-code
 - [ ] add feature to have more than one tag and reminder for the task

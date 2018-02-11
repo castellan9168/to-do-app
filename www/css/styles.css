@@ -87,10 +87,11 @@ html, body {
 
 .navigation {
   background-color: #e74c3c;
-  padding: 13px 30px;
+  padding: 10px 30px;
   margin-bottom: 30px;
   box-shadow: 0 4px 12px rgba(127, 0, 0, 0.1);
-  display: block; }
+  display: block;
+  font-size: 20px; }
   .navigation a {
     color: #ffffff; }
   .navigation .nav-left {
@@ -98,10 +99,42 @@ html, body {
   .navigation .nav-right {
     display: inline-block;
     float: right; }
-    .navigation .nav-right a {
-      margin-right: 20px; }
-    .navigation .nav-right a:last-of-type {
-      margin-right: 0px; }
+    .navigation .nav-right .search-box {
+      transition: width 0.6s, border-radius 0.6s, background 0.6s, box-shadow 0.6s;
+      width: 32px;
+      height: 32px;
+      border-radius: 16px;
+      border: none;
+      background: #c0392b; }
+      .navigation .nav-right .search-box + label .search-icon {
+        color: white; }
+      .navigation .nav-right .search-box:hover {
+        color: #212121;
+        background: white;
+        box-shadow: 0 0 0 2px #c0392b; }
+        .navigation .nav-right .search-box:hover + label .search-icon {
+          color: #212121; }
+      .navigation .nav-right .search-box:focus {
+        transition: width 0.6s cubic-bezier(0, 1.22, 0.66, 1), border-radius 0.6s, background 0.6s;
+        border: none;
+        outline: none;
+        box-shadow: none;
+        padding-left: 15px;
+        cursor: text;
+        width: 300px;
+        border-radius: auto;
+        background: white;
+        color: #212121; }
+        .navigation .nav-right .search-box:focus + label .search-icon {
+          color: #212121; }
+    .navigation .nav-right #search-submit {
+      position: relative;
+      left: -5000px; }
+    .navigation .nav-right .search-icon {
+      position: relative;
+      left: -30px;
+      color: white;
+      cursor: pointer; }
 
 .list-header {
   padding: 18px 30px; }

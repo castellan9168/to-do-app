@@ -1,10 +1,11 @@
 .navigation {
 
 	background-color: $primary-red;
-	padding: 13px $outer-padding;
+	padding: 10px $outer-padding;
 	margin-bottom: 30px;
 	box-shadow: $drop-shadow;
 	display: block;
+	font-size: 20px;
 
 	& a {
 		color: #ffffff;
@@ -18,11 +19,52 @@
 	.nav-right {
 		display: inline-block;
 		float: right;
-		& a {
-			margin-right: 20px;
+
+		.search-box {
+			transition: width $tl, border-radius $tl, background $tl, box-shadow $tl;
+			width: 32px;
+			height: 32px;
+			border-radius: 16px;
+			border: none;
+			background: #c0392b;
+			& + label .search-icon {
+				color: white;
+			}
+			&:hover {
+				color: $font-color-primary;
+				background: white;
+				box-shadow: 0 0 0 2px rgb(192, 57, 43);
+				& + label .search-icon {
+					color: $font-color-primary;
+				}
+			}
+			&:focus {
+				transition: width $tl cubic-bezier(0, 1.22, .66, 1), border-radius $tl, background $tl;
+				border: none;
+				outline: none;
+				box-shadow: none;
+				padding-left: 15px;
+				cursor: text;
+				width: 300px;
+				border-radius: auto;
+				background: white;
+				color: $font-color-primary;
+				& + label .search-icon {
+					color: $font-color-primary;
+				}
+			}
 		}
-		a:last-of-type {
-			margin-right: 0px;
+
+		#search-submit {
+			position: relative;
+			left: -5000px;
+		}
+
+		.search-icon {
+			position: relative;
+			left: -30px;
+			color: white;
+			cursor: pointer;
 		}
 	}
 }
