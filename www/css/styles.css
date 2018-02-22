@@ -1,3 +1,24 @@
+/* Building grid overlay */
+html {
+  position: relative; }
+
+html::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 920px;
+  max-width: 920px;
+  min-height: 100vh;
+  content: '';
+  background-image: repeating-linear-gradient(to right, rgba(126, 195, 241, 0.25), rgba(126, 195, 241, 0.25) 95px, transparent 95px, transparent 115px), repeating-linear-gradient(to bottom, rgba(126, 195, 241, 0.25), rgba(126, 195, 241, 0.25) 1px, transparent 1px, transparent 1rem);
+  background-size: 940px;
+  z-index: 1000;
+  pointer-events: none; }
+
 html, body {
   height: 100%;
   background-color: #EEEEEE;
@@ -99,22 +120,26 @@ html, body {
   .navigation .nav-right {
     display: inline-block;
     float: right; }
-    .navigation .nav-right .search-box {
-      transition: width 0.6s, border-radius 0.6s, background 0.6s, box-shadow 0.6s;
+    .navigation .nav-right .search-container .search-box {
+      transition: width 0.6s, border-radius 0.6s, background 0.6s, box-shadow 0.6s, color 0.6s;
       width: 32px;
       height: 32px;
       border-radius: 16px;
       border: none;
       background: #c0392b; }
-      .navigation .nav-right .search-box + label .search-icon {
+      .navigation .nav-right .search-container .search-box::placeholder {
+        color: #c0392b; }
+      .navigation .nav-right .search-container .search-box + label .search-icon {
         color: white; }
-      .navigation .nav-right .search-box:hover {
+      .navigation .nav-right .search-container .search-box:hover {
         color: #212121;
         background: white;
         box-shadow: 0 0 0 2px #c0392b; }
-        .navigation .nav-right .search-box:hover + label .search-icon {
+        .navigation .nav-right .search-container .search-box:hover + label .search-icon {
           color: #212121; }
-      .navigation .nav-right .search-box:focus {
+        .navigation .nav-right .search-container .search-box:hover::placeholder {
+          color: white; }
+      .navigation .nav-right .search-container .search-box:focus {
         transition: width 0.6s cubic-bezier(0, 1.22, 0.66, 1), border-radius 0.6s, background 0.6s;
         border: none;
         outline: none;
@@ -125,12 +150,14 @@ html, body {
         border-radius: auto;
         background: white;
         color: #212121; }
-        .navigation .nav-right .search-box:focus + label .search-icon {
+        .navigation .nav-right .search-container .search-box:focus::placeholder {
+          color: #7f8c8d; }
+        .navigation .nav-right .search-container .search-box:focus + label .search-icon {
           color: #212121; }
-    .navigation .nav-right #search-submit {
+    .navigation .nav-right .search-container #search-submit {
       position: relative;
       left: -5000px; }
-    .navigation .nav-right .search-icon {
+    .navigation .nav-right .search-container .search-icon {
       position: relative;
       left: -30px;
       color: white;

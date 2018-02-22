@@ -48,7 +48,7 @@
     </div>
     <div>
       <ul class="list" ng-show="showList">
-        <task-list-element data='task' ng-repeat='task in tasksList | filter: projectFilter' ></task-list-element>
+        <task-list-element data='task' ng-repeat='task in tasksList | filter: {name: searchName, project:projectFilter}' ></task-list-element>
       </ul>
       <div  class="no-tasks" ng-hide="showList">
         You have no tasks

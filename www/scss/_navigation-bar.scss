@@ -20,51 +20,63 @@
 		display: inline-block;
 		float: right;
 
-		.search-box {
-			transition: width $tl, border-radius $tl, background $tl, box-shadow $tl;
-			width: 32px;
-			height: 32px;
-			border-radius: 16px;
-			border: none;
-			background: #c0392b;
-			& + label .search-icon {
-				color: white;
-			}
-			&:hover {
-				color: $font-color-primary;
-				background: white;
-				box-shadow: 0 0 0 2px rgb(192, 57, 43);
-				& + label .search-icon {
-					color: $font-color-primary;
-				}
-			}
-			&:focus {
-				transition: width $tl cubic-bezier(0, 1.22, .66, 1), border-radius $tl, background $tl;
+		.search-container {
+
+			.search-box {
+				transition: width $tl, border-radius $tl, background $tl, box-shadow $tl, color $tl;
+				width: 32px;
+				height: 32px;
+				border-radius: 16px;
 				border: none;
-				outline: none;
-				box-shadow: none;
-				padding-left: 15px;
-				cursor: text;
-				width: 300px;
-				border-radius: auto;
-				background: white;
-				color: $font-color-primary;
+				background: #c0392b;
+				&::placeholder {
+					color: #c0392b;
+				}
 				& + label .search-icon {
+					color: white;
+				}
+				&:hover {
 					color: $font-color-primary;
+					background: white;
+					box-shadow: 0 0 0 2px rgb(192, 57, 43);
+					& + label .search-icon {
+						color: $font-color-primary;
+					}
+					&::placeholder {
+						color: white;
+					}
+				}
+				&:focus {
+					transition: width $tl cubic-bezier(0, 1.22, .66, 1), border-radius $tl, background $tl;
+					border: none;
+					outline: none;
+					box-shadow: none;
+					padding-left: 15px;
+					cursor: text;
+					width: 300px;
+					border-radius: auto;
+					background: white;
+					color: $font-color-primary;
+					&::placeholder {
+						color: #7f8c8d;
+					}
+					& + label .search-icon {
+						color: $font-color-primary;
+					}
 				}
 			}
-		}
 
-		#search-submit {
-			position: relative;
-			left: -5000px;
-		}
+			#search-submit {
+				position: relative;
+				left: -5000px;
+			}
 
-		.search-icon {
-			position: relative;
-			left: -30px;
-			color: white;
-			cursor: pointer;
+			.search-icon {
+				position: relative;
+				left: -30px;
+				color: white;
+				cursor: pointer;
+			}
 		}
 	}
 }
