@@ -83,9 +83,10 @@ html, body {
   position: fixed;
   width: 100%;
   overflow-x: hidden;
-  z-index: 1; }
-  #side-navigation a {
-    color: #212121; }
+  z-index: 1;
+  color: #212121; }
+  #side-navigation a:link, #side-navigation a:visited {
+    color: inherit; }
   #side-navigation .side-menu {
     display: inline-block;
     position: absolute;
@@ -234,6 +235,8 @@ html, body {
       clear: both; }
     .list .list-element:last-child {
       margin-right: 0%; }
+    .list .list-element a:link, .list .list-element a:visited {
+      color: inherit; }
     .list .list-element .name {
       padding-bottom: 5px;
       display: inline-block; }
@@ -242,7 +245,8 @@ html, body {
         float: right; }
     .list .list-element .edit-panel {
       display: inline-block;
-      float: right; }
+      float: right;
+      color: #757575; }
     .list .list-element .additional-info, .list .list-element .date {
       color: #9E9E9E;
       font-size: 14px;

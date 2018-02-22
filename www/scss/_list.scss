@@ -63,6 +63,10 @@
 		color: #212121;
 		border-bottom: 1px solid #E0E0E0;
 
+		a:link, a:visited {
+			color: inherit;
+		}
+
 		.name{
 			padding-bottom: 5px;
 			display: inline-block;
@@ -75,6 +79,7 @@
 		.edit-panel {
 			display: inline-block;
 			float: right;
+			color: $font-color-secondary;
 		}
 
 		.additional-info, .date {
