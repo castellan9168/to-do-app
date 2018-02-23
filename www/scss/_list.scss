@@ -59,7 +59,7 @@
 		cursor: pointer;
 		text-decoration: none;
 		font-size: 22px;
-		padding: 15px 0px;
+		padding: 15px 15px;
 		color: #212121;
 		border-bottom: 1px solid #E0E0E0;
 
@@ -67,13 +67,10 @@
 			color: inherit;
 		}
 
-		.name{
-			padding-bottom: 5px;
+		.name {
+			padding-bottom: 7px;
 			display: inline-block;
-			.due-date {
-				color: #9E9E9E;
-				float: right;
-			}
+			font-weight: 500;
 		}
 
 		.edit-panel {
@@ -83,13 +80,13 @@
 		}
 
 		.additional-info, .date {
-			color: #9E9E9E;
+			color: $font-color-secondary;
 			font-size: 14px;
 			font-weight: 500;
 		}
 
 		.date {
-			padding-bottom: 4px;
+			padding-bottom: 6px;
 		}
 
 		.details {
@@ -113,27 +110,35 @@
 				color: $font-color-secondary;
 				height: 24px;
 				i {
-					font-size: 22px;
+					font-size: 16px;
 					line-height: 24px;
-					margin-right: 5px;
+					margin-right: 3px;
 				}
 
 				.label-name {
-					font-size: 16px;
-					//vertical-align: middle;
+					font-size: 14px;
+					font-weight: 500;
 					display: inline-block;
 					line-height: 24px;
 				}
 			}
 
 			.content {
-				padding-left: 5px;
+				//padding-left: 5px;
 				padding-top: 5px;
+				font-weight: 500;
 			}
 		}
 
 		&:hover {
 			background-color: $background-on-hover;
+		}
+
+	}
+
+	.completed {
+		.name, .edit-panel {
+			color: $nephritis;
 		}
 	}
 }

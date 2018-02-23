@@ -3,6 +3,7 @@
 <head>
   <!-- SCROLLS -->
   <!-- load bootstrap and fontawesome via CDN -->
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.7/angular-material.min.css">
   <link rel="stylesheet" type="text/css" href="css/styles.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
@@ -10,7 +11,11 @@
   <!-- SPELLS -->
   <!-- load angular via CDN -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
   <script src="js/script.js"></script>
   <script src="js/services.js"></script>
   <script src="js/factories.js"></script>
@@ -33,7 +38,7 @@
 </head>
 
 <!-- define angular controller -->
-<body ng-controller="mainController">
+<body ng-controller="mainController" ng-cloak>
   <side-navigation id="side-navigation"></side-navigation>
   <new-task-modal id="new-task-pop-up"></new-task-modal>
   <main-navigation id='navigation'></main-navigation>

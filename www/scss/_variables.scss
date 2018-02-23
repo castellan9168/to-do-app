@@ -1,11 +1,17 @@
 $outer-padding: 30px;
 $offset: 20px;        // Padding of the main container
+$tl: 0.6s;        // Transition lenght for seach icon transition
+
+
+// colors
+
+$emerald: #2ecc71;
+$nephritis: #27ae60;
 $font-color-primary: #212121;
-$font-color-secondary: #757575;
+$font-color-secondary: #9E9E9E;
 $drop-shadow: 0 4px 12px rgba(127, 0, 0, 0.1);
 $overlay-shadow: rgba(44,62,80 ,0.3);
 $background-on-hover: #EEEEEE;
 $box-border: 1px solid #E0E0E0;
 $primary-red: #e74c3c;
 $white: #FFFFFF;
-$tl: 0.6s;        // Transition lenght for seach icon transition
