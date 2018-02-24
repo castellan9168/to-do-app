@@ -1,56 +1,54 @@
-<div id="overlay"></div>
-<div id="popup">
-  <div class="popup-controls">
-    <span id="popup-close" ng-click="closePopup()">X</span>
-  </div>
-  <div class="popup-content">
-    <h4>New task</h4>
-    <form>
-      <div>
-        <label for="task-name">Name your task</label>
-        <input type="text" class="" id="task-name" placeholer="e.g. meeting wednesday, 15" ng-model="task.name">
-      </div>
-      <div>
-        <label for="due-date">Date</label>
-        <input type="date" class="" id="due-date" ng-model="task.date">
-      </div>
-      <div>
+<md-dialog aria-label="New task">
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h2>New task</h2>
+            <span flex></span>
+            <mb-button class="md-icon-button" ng-click="closePopup()"></mb-button>
+        </div>
+    </md-toolbar>
+    <md-dialog-content class="popup-content" layout="column">
+        <md-input-container>
+            <label for="task-name">Name your task</label>
+            <input type="text" class="" id="task-name" placeholer="e.g. meeting wednesday, 15" ng-model="task.name">
+        </md-input-container>
+      <md-datepicker ng-model="task.date" md-placeholder="Pick date"></md-datepicker>
+      <md-input-container>
         <label for="project">Project</label>
         <input type="text" class="" id="project" ng-model="task.project">
-      </div>
-      <div>
+      </md-input-container>
+      <md-input-container>
         <label for="priority">Priority</label>
-        <select name="Priority" id="priority" ng-model="task.priority">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-        </select>
-      </div>
-      <div>
+        <md-select name="Priority" id="priority" ng-model="task.priority">
+          <md-option value="1">1</md-option>
+          <md-option value="2">2</md-option>
+          <md-option value="3">3</md-option>
+          <md-option value="4">4</md-option>
+        </md-select>
+      </md-input-container>
+      <md-input-container>
         <label for="tags">Tags</label>
         <input type="text" class="" id="tags" ng-model="task.tags">
-      </div>
-      <div>
+      </md-input-container>
+      <md-input-container>
         <label for="parent">Parent</label>
         <input type="text" class="" id="parent" ng-model="task.parent">
-      </div>
-      <div>
+      </md-input-container>
+      <md-input-container>
         <label for="comments">Comments</label>
         <input type="text" class="" id="comments" ng-model="task.comments">
-      </div>
-      <div>
+      </md-input-container>
+      <md-input-container>
         <label for="reminders">Remind me</label>
-        <select name="Remind me" id="reminders" ng-model="task.reminders">
-          <option value="10 minutes before">10 minutes before</option>
-          <option value="30 minutes before">30 minutes before</option>
-          <option value="1 hour before">1 hour before</option>
-          <option value="2 hours before">2 hours before</option>
-        </select>
-      </div>
-      <div>
-        <button type="submit" ng-click="addNewTask()">Confirm</button>
-      </div>
-    </form>
-  </div>
-</div>
+        <md-select name="Remind me" id="reminders" ng-model="task.reminders">
+          <md-option value="10 minutes before">10 minutes before</md-option>
+          <md-option value="30 minutes before">30 minutes before</md-option>
+          <md-option value="1 hour before">1 hour before</md-option>
+          <md-option value="2 hours before">2 hours before</md-option>
+        </md-select>
+      </md-input-container>
+    </md-dialog-content>
+    <md-dialog-actions>
+        <md-button class="md-secondary md-raised">Cancel</md-button>
+        <md-button class="md-primary md-raised" type="submit" ng-click="addNewTask()">Confirm</md-button>
+    </md-dialog-actions>
+</md-dialog>

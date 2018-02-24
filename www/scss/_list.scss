@@ -50,11 +50,11 @@
 }
 
 .list {
-	@include column(1);
+	// @include column(1);
 	list-style-type: none;
 
 	.list-element {
-		@include column(1);
+		// @include column(1);
 		display: block;
 		cursor: pointer;
 		text-decoration: none;
@@ -92,18 +92,18 @@
 		.details {
 			padding-top: 11px;
 			.details-other {
-				@include column(9/12);
+				// @include column(9/12);
 				.detail-other-inline{
-					@include column(3/12);
+					// @include column(3/12);
 					margin-bottom: 20px;
 				}
 				.detail-other-note {
-					@include column(1);
+					// @include column(1);
 				}
 			}
 
 			.details-reminders {
-				@include column(3/12);
+				// @include column(3/12);
 			}
 
 			.label {
@@ -144,7 +144,7 @@
 }
 
 .new-task-panel {
-	@include column(1);
+	// @include column(1);
 }
 
 .no-tasks {

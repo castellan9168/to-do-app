@@ -1,6 +1,6 @@
 angular.module('toDoApp')
 
-.controller("newTaskModalController", function($scope, $rootScope, taskActionsService, retrieveTasksFactory) {
+.controller("newTaskModalController", function($scope, $rootScope, $mdDialog, taskActionsService, retrieveTasksFactory) {
 	var popup = document.getElementById('new-task-pop-up');
 
 	$scope.closePopup = function() {

@@ -38,30 +38,41 @@
 </head>
 
 <!-- define angular controller -->
-<body ng-controller="mainController" ng-cloak>
+<body ng-controller="mainController"ng-cloak>
   <side-navigation id="side-navigation"></side-navigation>
   <new-task-modal id="new-task-pop-up"></new-task-modal>
   <main-navigation id='navigation'></main-navigation>
-  <div class="container box">
-    <div class="list-header">
-      <div class="filter-project-type">
-        <select name="project-filter" id="project-filter" ng-model="projectFilter" ng-options="project for project in projectName">
-          <option value="">All</option>
-        </select>
-      </div>
-      <div class="button-change-date" ng-click="">Change date<i class="fa fa-calendar-o" aria-hidden="true"></i></div>
-    </div>
-    <div>
-      <ul class="list" ng-show="showList">
-        <task-list-element data='task' ng-repeat='task in tasksList | filter: {name: searchName, project:projectFilter}' ></task-list-element>
-      </ul>
-      <div  class="no-tasks" ng-hide="showList">
-        You have no tasks
-      </div>
-    </div>
-    <div class="new-task-panel">
-      <a href="" class="button-new-task" ng-click="newTask()"><i class="fa fa-plus" aria-hidden="true"></i></a>
-    </div>
+  <div layout="column" layout-align="center center" >
+      <md-card class="main-card" >
+          <md-card-header>
+            <md-card-header-text>
+                <span class="md-title">To do list</span>
+            </md-card-header-text>
+          </md-card-header>
+          <div class="container box">
+            <div class="list-header">
+              <div class="filter-project-type">
+                <select name="project-filter" id="project-filter" ng-model="projectFilter" ng-options="project for project in projectName">
+                  <option value="">All</option>
+                </select>
+              </div>
+              <div class="button-change-date" ng-click="">Change date<i class="fa fa-calendar-o" aria-hidden="true"></i></div>
+            </div>
+            <div>
+              <md-list ng-show="showList">
+                <task-list-element data='task' ng-repeat='task in tasksList | filter: {name: searchName, project:projectFilter}' ></task-list-element>
+              </md-list>
+              <div  class="no-tasks" ng-hide="showList">
+                You have no tasks
+              </div>
+            </div>
+          </div>
+          <md-card-footer>
+              <md-card-actions layout="row" layout-align="end center">
+                <md-button class="md-primary md-raised" ng-click="showAdvanced($event)">New task</md-button>
+              </md-card-actions>
+          </md-card-footer>
+      </md-card>
   </div>
 </body>
 <script async></script>
