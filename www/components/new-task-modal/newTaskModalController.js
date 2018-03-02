@@ -4,7 +4,7 @@ angular.module('toDoApp')
 	var popup = document.getElementById('new-task-pop-up');
 
 	$scope.closePopup = function() {
-		popup.style.display = 'none';
+		$mdDialog.hide();
 	};
 
 	$scope.addNewTask = function() {

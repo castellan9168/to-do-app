@@ -17,16 +17,13 @@ angular.module('toDoApp')
 
 	$scope.customFullScreen = false;
 
-	$scope.showAdvanced = function(ev) {
+	$scope.showNewTask = function(ev) {
 		$mdDialog.show({
 			templateUrl: 'components/new-task-modal/newTaskModal.html',
-			controller: function () {
-				return self;
-			},
-			controllerAs: 'ctrl',
+			controller: 'newTaskModalController',
 			parent: angular.element(document.body),
 			targeEvent:  ev,
-			clicOutsideToClose: true,
+			clickOutsideToClose: true,
 			fullscreen: $scope.customFullScreen // only for -xs, -sm breakpoints
 		})
 		.then(function(answer) {
