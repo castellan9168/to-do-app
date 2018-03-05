@@ -13,8 +13,7 @@ html, body {
 .box {
   border: 1px solid #E0E0E0;
   border-radius: 3px;
-  background-color: #ffffff;
-  box-shadow: 0 4px 12px rgba(127, 0, 0, 0.1); }
+  background-color: #ffffff; }
 
 .main-card {
   width: 960px; }
@@ -54,14 +53,12 @@ html, body {
     position: absolute;
     height: 100%;
     width: 70%;
-    right: 0;
-    background-color: rgba(44, 62, 80, 0.3); }
+    right: 0; }
 
 .navigation {
   background-color: #e74c3c;
   padding: 10px 30px;
   margin-bottom: 30px;
-  box-shadow: 0 4px 12px rgba(127, 0, 0, 0.1);
   display: block;
   font-size: 20px; }
   .navigation a {
@@ -114,107 +111,31 @@ html, body {
       color: white;
       cursor: pointer; }
 
-.list-header {
-  padding: 18px 0px; }
-  .list-header div {
-    display: inline-block;
-    color: #e74c3c;
-    text-decoration: none;
-    cursor: pointer; }
-    .list-header div i {
-      padding-left: 10px; }
-  .list-header .filter-project-type {
-    position: relative; }
-    .list-header .filter-project-type #filter-project-type-dropdown {
-      display: none; }
-    .list-header .filter-project-type .dropdown-content {
-      position: absolute;
-      border-radius: 3px;
-      margin-top: 4px;
-      width: 200px;
-      background-color: #FAFAFA;
-      box-shadow: 0 4px 12px rgba(127, 0, 0, 0.1); }
-      .list-header .filter-project-type .dropdown-content:hover {
-        display: block; }
-      .list-header .filter-project-type .dropdown-content a {
-        display: block;
-        height: 35px;
-        text-decoration: none;
-        color: #212121;
-        line-height: 35px; }
-        .list-header .filter-project-type .dropdown-content a i {
-          margin-right: 10px;
-          font-size: 11px;
-          line-height: 35px; }
-        .list-header .filter-project-type .dropdown-content a:hover {
-          background-color: #EEEEEE; }
-  .list-header .button-change-date {
-    float: right; }
+.list-button {
+  min-width: 36px; }
 
-.list {
-  list-style-type: none; }
-  .list .list-element {
-    display: block;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 22px;
-    padding: 15px 15px;
-    color: #212121;
-    border-bottom: 1px solid #E0E0E0; }
-    .list .list-element a:link, .list .list-element a:visited {
-      color: inherit; }
-    .list .list-element .name {
-      padding-bottom: 7px;
-      display: inline-block;
-      font-weight: 500; }
-    .list .list-element .edit-panel {
-      display: inline-block;
-      float: right;
-      color: #9E9E9E; }
-    .list .list-element .additional-info, .list .list-element .date {
-      color: #9E9E9E;
-      font-size: 14px;
-      font-weight: 500; }
-    .list .list-element .date {
-      padding-bottom: 6px; }
-    .list .list-element .details {
-      padding-top: 11px; }
-      .list .list-element .details .details-other .detail-other-inline {
-        margin-bottom: 20px; }
-      .list .list-element .details .label {
-        color: #9E9E9E;
-        height: 24px; }
-        .list .list-element .details .label i {
-          font-size: 16px;
-          line-height: 24px;
-          margin-right: 3px; }
-        .list .list-element .details .label .label-name {
-          font-size: 14px;
-          font-weight: 500;
-          display: inline-block;
-          line-height: 24px; }
-      .list .list-element .details .content {
-        padding-top: 5px;
-        font-weight: 500; }
-    .list .list-element:hover {
-      background-color: #EEEEEE; }
-  .list .completed .name, .list .completed .edit-panel {
-    color: #27ae60; }
+.list-header {
+  padding: 18px 15px; }
+
+.list-item-details .details-other .detail-other-inline {
+  margin-bottom: 20px; }
+
+.list-item-details .label {
+  color: #9E9E9E;
+  height: 24px; }
+  .list-item-details .label i {
+    font-size: 16px;
+    line-height: 24px;
+    margin-right: 3px; }
+  .list-item-details .label .label-name {
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-block;
+    line-height: 24px; }
+
+.completed .name, .completed .edit-panel {
+  color: #27ae60; }
 
 .no-tasks {
   padding: 0px 30px;
   text-align: center; }
-
-.new-task-panel .button-new-task {
-  display: block;
-  margin: 15px auto;
-  width: 60px;
-  height: 60px;
-  border-radius: 30px;
-  text-decoration: none;
-  color: #ffffff;
-  text-align: center;
-  line-height: 60px;
-  font-size: 32px;
-  background-color: #f39c12;
-  box-shadow: 0 4px 12px rgba(127, 0, 0, 0.1); }
