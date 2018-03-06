@@ -1,150 +1,41 @@
-.list-header {
-	padding: 18px 0px;
-	div {
-		display: inline-block;
-		color: #e74c3c;
-		text-decoration: none;
-		cursor: pointer;
-
-		i {
-			padding-left: 10px;
-		}
-	}
-
-	.filter-project-type {
-		position: relative;
-		#filter-project-type-dropdown {
-			display: none;
-		}
-		.dropdown-content {
-			position: absolute;
-			border-radius: 3px;
-			margin-top: 4px;
-			width: 200px;
-			background-color: #FAFAFA;;
-			box-shadow: $drop-shadow;
-			&:hover {
-				display: block;
-			}
-			a {
-				display: block;
-				height: 35px;
-				text-decoration: none;
-				color: $font-color-primary;
-				line-height: 35px;
-				i {
-					margin-right: 10px;
-					font-size: 11px;
-					line-height: 35px;
-				}
-				&:hover {
-					background-color: $background-on-hover;
-				}
-			}
-		}
-	}
-
-	.button-change-date {
-		float: right;
-	}
+.list-button {
+	min-width: 36px;
 }
 
-.list {
-	@include column(1);
-	list-style-type: none;
+.list-header {
+	padding: 18px 15px;
+}
 
-	.list-element {
-		@include column(1);
-		display: block;
-		cursor: pointer;
-		text-decoration: none;
-		font-size: 22px;
-		padding: 15px 15px;
-		color: #212121;
-		border-bottom: 1px solid #E0E0E0;
 
-		a:link, a:visited {
-			color: inherit;
+.list-item-details {
+	.details-other {
+		.detail-other-inline{
+			margin-bottom: 20px;
+		}
+	}
+
+	.label {
+		color: $font-color-secondary;
+		height: 24px;
+		i {
+			font-size: 16px;
+			line-height: 24px;
+			margin-right: 3px;
 		}
 
-		.name {
-			padding-bottom: 7px;
-			display: inline-block;
-			font-weight: 500;
-		}
-
-		.edit-panel {
-			display: inline-block;
-			float: right;
-			color: $font-color-secondary;
-		}
-
-		.additional-info, .date {
-			color: $font-color-secondary;
+		.label-name {
 			font-size: 14px;
 			font-weight: 500;
-		}
-
-		.date {
-			padding-bottom: 6px;
-		}
-
-		.details {
-			padding-top: 11px;
-			.details-other {
-				@include column(9/12);
-				.detail-other-inline{
-					@include column(3/12);
-					margin-bottom: 20px;
-				}
-				.detail-other-note {
-					@include column(1);
-				}
-			}
-
-			.details-reminders {
-				@include column(3/12);
-			}
-
-			.label {
-				color: $font-color-secondary;
-				height: 24px;
-				i {
-					font-size: 16px;
-					line-height: 24px;
-					margin-right: 3px;
-				}
-
-				.label-name {
-					font-size: 14px;
-					font-weight: 500;
-					display: inline-block;
-					line-height: 24px;
-				}
-			}
-
-			.content {
-				//padding-left: 5px;
-				padding-top: 5px;
-				font-weight: 500;
-			}
-		}
-
-		&:hover {
-			background-color: $background-on-hover;
-		}
-
-	}
-
-	.completed {
-		.name, .edit-panel {
-			color: $nephritis;
+			display: inline-block;
+			line-height: 24px;
 		}
 	}
 }
 
-.new-task-panel {
-	@include column(1);
+.completed {
+	.name, .edit-panel {
+		color: $nephritis;
+	}
 }
 
 .no-tasks {

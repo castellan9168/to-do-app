@@ -4,6 +4,7 @@ angular.module('toDoApp')
 
 	var addTask = function(task) {
 		return $q(function(resolve, reject) {
+			console.log(task);
 			$http.post(API_ENDPOINT.url + '/newTask', task).then(function(result) {
 				if(result.data.success) {
 					resolve(result.data.msg);

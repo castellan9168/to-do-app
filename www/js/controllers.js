@@ -1,6 +1,6 @@
 angular.module('toDoApp')
 
-.controller('mainController', function($scope, $rootScope, taskActionsService, retrieveTasksFactory) {
+.controller('mainController', function($scope, $rootScope, $mdDialog, $mdSidenav, $mdColorPalette, taskActionsService, retrieveTasksFactory) {
 	var newTaskPopUp = document.getElementById('new-task-pop-up'),
 		filterProjectTypeDropdown = document.getElementById('filter-project-type-dropdown');
 
@@ -15,7 +15,23 @@ angular.module('toDoApp')
 		reminders: ''
 	};
 
-	$scope.outerTest = 'Testowy zewnetrzny';
+	$scope.customFullScreen = false;
+
+	$scope.showNewTask = function(ev) {
+		$mdDialog.show({
+			templateUrl: 'components/new-task-modal/newTaskModal.html',
+			controller: 'newTaskModalController',
+			parent: angular.element(document.body),
+			targeEvent:  ev,
+			clickOutsideToClose: true,
+			fullscreen: $scope.customFullScreen // only for -xs, -sm breakpoints
+		})
+		.then(function(answer) {
+
+		}, function() {
+
+		});
+	};
 
 	$rootScope.projectName = [];
 
@@ -24,7 +40,6 @@ angular.module('toDoApp')
 	$rootScope.tasksList = {};
 	retrieveTasksFactory.getTasksList()
 	.then(function (tasks) {
-		// var i;
 
 		$rootScope.tasksList = tasks;
 		if (tasks.length > 0) $scope.showList = true;
