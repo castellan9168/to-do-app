@@ -1,14 +1,6 @@
-<md-toolbar>
-  <div class="container">
-    <div class="nav-left">
-      <a href="" ng-click="showSideNav()"><i class="fa fa-bars" aria-hidden="true"></i></a>
-    </div>
-    <div class="nav-right">
-      <form class="search-container" action="">
-          <input id="search-box" type="text" class="search-box" name="q" ng-model="searchName" placeholder="Enter task's name"/>
-          <label for="search-box"><i class="fa fa-search search-icon" aria-hidden="true"></i></span></label>
-          <input type="submit" id="search-submit" />
-       </form>
-    </div>
+<md-toolbar class="navigation" layout-align="center center">
+  <div class="md-toolbar-tools md-padding nav-content" layout-align="space-between center">
+      <md-button class="nav-button" ng-click="showSideNav()"><i class="fa fa-bars" aria-hidden="true"></i></md-button>
+      <md-button class="nav-button"><i class="fa fa-search"></i></md-button>
   </div>
 </md-toolbar>
