@@ -26,35 +26,6 @@ html, body {
   .new-task .popup-content {
     padding: 30px 30px; }
 
-#side-navigation {
-  height: 100%;
-  display: none;
-  position: fixed;
-  width: 100%;
-  overflow-x: hidden;
-  z-index: 1;
-  color: #212121; }
-  #side-navigation a:link, #side-navigation a:visited {
-    color: inherit; }
-  #side-navigation .side-menu {
-    display: inline-block;
-    position: absolute;
-    background-color: #FFFFFF;
-    height: 100%;
-    width: 30%;
-    padding: 20px; }
-    #side-navigation .side-menu .close-button {
-      display: inline-block;
-      float: right;
-      font-size: 32px;
-      color: #9E9E9E; }
-  #side-navigation .shadow-cover {
-    display: inline-block;
-    position: absolute;
-    height: 100%;
-    width: 70%;
-    right: 0; }
-
 .navigation {
   font-size: 20px;
   margin-bottom: 40px; }

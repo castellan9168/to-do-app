@@ -61,10 +61,15 @@ angular.module('toDoApp')
 
 angular.module('toDoApp')
 
-.service('sharedProperties', function() {
+.service('sharedProperties', function($timeout, $mdSidenav, $log) {
 	var sideNav = document.getElementById('side-navigation');
 
+	var toggleSideNav = function () {
+        $mdSidenav('left').toggle();
+    };
+
 	return {
-		sideNav : sideNav
+		sideNav : sideNav,
+		toggleSideNav: toggleSideNav
 	}
 });
