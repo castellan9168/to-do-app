@@ -3,12 +3,13 @@
 		<h3 class="task-name">{{$ctrl.data.name}}</h3>
 		<h4>{{$ctrl.data.project}}</h4>
 		<p>{{$ctrl.data.displayDate}}</p>
-		<md-button class="md-secondary list-button" ng-click="complete($ctrl.data)" aria-label="Complete"><i class="fa fa-check"  aria-hidden="true"></i></md-button>
 		<md-button class="md-secondary list-button" ng-click="delete($ctrl.data)" aria-label="Delete"><i class="fa fa-trash" aria-hidden="true"></i></md-button>
+		<md-button class="md-secondary list-button" ng-click="" aria-label="Edit"><i class="fa fa-pencil" aria-hidden="true"></i></md-button>
+		<md-button class="md-secondary list-button" ng-click="complete($ctrl.data)" aria-label="Complete"><i class="fa fa-check"  aria-hidden="true"></i></md-button>
 	</div>
 </md-list-item>
 <div class="list-item-details md-padding" ng-show="task.detailed" layout="column">
-	<div layout="row" layout-align="space-between center">	
+	<div layout="row" layout-align="space-between center">
 		<div layout="column">
 			<div class="label">
 				<i class="fa fa-flag-o" aria-hidden="true"></i>

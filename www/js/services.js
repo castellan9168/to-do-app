@@ -40,13 +40,17 @@ angular.module('toDoApp')
 	};
 
 	var getProjectsFilter = function() {
-		var i;
+		var i, j;
+		var added = false;
+
 		// I am filling project's filter with values
 		for (i = 0; i < $rootScope.tasksList.length; i++) {
 			var temp = $rootScope.tasksList[i].project;
-			if ($rootScope.projectName.indexOf(temp) == -1) {
-				$rootScope.projectName.push(temp);
+			for (j = 0; j < $rootScope.projectName.length; j++) {
+				if ($rootScope.projectName[j][0] == temp) added = true;
 			}
+			if (!added) $rootScope.projectName.push([temp, temp]);
+			added = false;
 		}
 	};
 

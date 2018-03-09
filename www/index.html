@@ -51,14 +51,17 @@
           </md-card-header>
           <div>
             <md-toolbar layout="row" layout-align="space-between center" class="list-header"  md-colors="{background: 'grey'}">
-              <div class="filter-project-type">
-                <select name="project-filter" id="project-filter" ng-model="projectFilter" ng-options="project for project in projectName">
-                  <option value="">All</option>
-                </select>
-              </div>
-              <div>
-                  <md-button>Change date<i class="fa fa-calendar-o" aria-hidden="true"></i></md-button>
-              </div>
+                <div>
+                    <md-input-container class="md-block">
+                        <label>Project</label>
+                        <md-select ng-model="projectFilter">
+                            <md-option ng-repeat="project in projectName" value="{{project[0]}}">{{project[1]}}</md-option>
+                        </md-select>
+                    </md-input-container>
+                </div>
+                <div>
+                    <md-button>Change date<i class="fa fa-calendar-o" aria-hidden="true"></i></md-button>
+                </div>
             </md-toolbar>
             <div>
               <md-list ng-show="showList">

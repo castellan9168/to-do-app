@@ -34,6 +34,7 @@ angular.module('toDoApp')
 	};
 
 	$rootScope.projectName = [];
+	$rootScope.projectName.push(['','All']);
 
 	$scope.showList = false;
 
@@ -45,25 +46,9 @@ angular.module('toDoApp')
 		if (tasks.length > 0) $scope.showList = true;
 
 		taskActionsService.getProjectsFilter();
+
 	}, function (error) {
 		console.error(error);
 	});
-
-	$scope.newTask = function() {
-		newTaskPopUp.style.display = 'block';
-	};
-
-	$scope.filterProjectType = function () {
-		filterProjecTypeDropdown.style.display = 'block';
-	};
-
-	$scope.selectProjectType = function () {
-		filterProjecTypeDropdown.style.display = 'none';
-	};
-
-	$scope.taskDetails = function($event) {
-		var showDetails = document.getElementById($event.target.id + '-details');
-		showDetails.style.display = 'block';
-	};
 
 });
