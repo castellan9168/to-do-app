@@ -45,32 +45,27 @@
   <main-navigation id='navigation'></main-navigation>
   <div layout="column" layout-align="center center" >
       <md-card class="main-card">
-          <md-card-header>
+          <md-card-header md-color="indigo">
             <md-card-header-text>
                 <span class="md-title">To do list</span>
             </md-card-header-text>
           </md-card-header>
           <div>
-            <md-toolbar layout="row" layout-align="space-between center" class="list-header"  md-colors="{background: 'grey'}">
-                <div>
-                    <md-input-container class="md-block">
-                        <label>Project</label>
-                        <md-select ng-model="projectFilter">
-                            <md-option ng-repeat="project in projectName" value="{{project[0]}}">{{project[1]}}</md-option>
-                        </md-select>
-                    </md-input-container>
-                </div>
-                <div>
-                    <md-button class="change-date">Change date<i class="fa fa-calendar-o" aria-hidden="true"></i></md-button>
-                </div>
+            <md-divider></md-divider>
+            <md-toolbar layout="row" layout-align="space-between center" class="list-header">
+                <md-input-container class="md-block">
+                    <label>Project</label>
+                    <md-select ng-model="projectFilter">
+                        <md-option ng-repeat="project in projectName" value="{{project[0]}}">{{project[1]}}</md-option>
+                    </md-select>
+                </md-input-container>
+                <md-button class="change-date">Change date<i class="fa fa-calendar-o" aria-hidden="true"></i></md-button>
             </md-toolbar>
-            <div>
-              <md-list ng-show="showList">
+            <md-list ng-show="showList">
                 <task-list-element data='task' ng-repeat='task in tasksList | filter: {name: searchName, project:projectFilter}' ></task-list-element>
-              </md-list>
-              <div  class="no-tasks" ng-hide="showList">
-                You have no tasks
-              </div>
+            </md-list>
+            <div  class="no-tasks" ng-hide="showList">
+            You have no tasks
             </div>
           </div>
           <md-card-footer>

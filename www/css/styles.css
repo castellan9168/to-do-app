@@ -82,7 +82,9 @@ html, body {
   min-width: 36px; }
 
 .list-header {
-  padding: 18px 15px; }
+  padding: 10px 15px 0px 15px;
+  background-color: #F5F5F5 !important;
+  color: #212121 !important; }
 
 .list-item-details .details-other .detail-other-inline {
   margin-bottom: 20px; }
