@@ -20,5 +20,16 @@ angular.module('toDoApp')
 
 .component("mainNavigation", {
 	templateUrl: 'components/navigation/mainNavigation.html',
-	controller: 'mainNavigationController',
+	controller: 'mainNavigationController'
+})
+
+.component("searchBar", {
+	templateUrl: 'components/search-bar/searchBar.html',
+	controller: 'searchBarController',
+	controllerAs: 'searchBarController',
+	bindToController: {
+		ngModel: '=',
+		expandClasses: '@',		// optional css expandClasses
+		markedClasses: '@'		// optional css markedClasses
+	}
 });

@@ -1,0 +1,29 @@
+<md-button
+    class="md-icon-button nav-button"
+    aria-label="Search"
+    ng-click="searchBarController.expand()"
+    ng-disabled="searchBarController.isExpanded()"
+    aria-label="Search"
+>
+    <!-- <md-tooltip md-direction="bottom">Search</md-tooltip> -->
+    <i class="fa fa-search"></i>
+</md-button>
+<span class="marker"></span>
+<input
+    type="text"
+    placeholder="Type the name of the task"
+    flex
+    ng-model="searchBarController.ngModel"
+    ng-blur="searchBarController.blurred('input')"
+    ng-focus="searchBarController.focused('input')"
+>
+<md-button
+    class="md-icon-button nav-button"
+    ng-click="searchBarController.collapse()"
+    ng-show="searchBarController.isExpanded()"
+    ng-blur="searchBarController.blurred('closeButton')"
+    ng-focus="searchBarController.focused('closeButton')"
+    aria-label="Close"
+>
+    <i class="fa fa-times"></i>
+</md-button>
